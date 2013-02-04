@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!ENTITY luminy    "Luminy">
+<!ENTITY stjerome  "St Jérôme">
+
+<!ENTITY % id_required "id  ID  #REQUIRED">
+
+<!ENTITY % liste       "(item*)" >
+<!ENTITY % liste_nv    "(item+)">
+
+<!-- Début Mise en forme -->
+<!ENTITY % miseenformebloc "(p|ul)+" >
+<!ENTITY % miseenformeinline "(#PCDATA|lien|span|br)*" > 
+
+<!ELEMENT ul (li+) >
+<!ELEMENT li (#PCDATA|lien|span|br|ul)* >
+<!ELEMENT p  %miseenformeinline; >
+
+<!ELEMENT lien (#PCDATA) >
+<!ATTLIST lien url CDATA #REQUIRED>
+
+<!ELEMENT span %miseenformeinline; >
+<!ATTLIST span class CDATA #REQUIRED>
+
+<!ELEMENT br EMPTY>
+<!-- Fin Mise en forme -->
+
+<!ELEMENT item (#PCDATA)>
+<!ELEMENT nom  (#PCDATA)>
+
+<!-- Début parcours -->
+<!ELEMENT parcours (responsables,nom,description,debouches,lieux,semestre+)>
+
+<!ELEMENT responsables %liste;    >
+<!ELEMENT description  %miseenformebloc;  >
+<!ELEMENT debouches    %liste;    >
+<!ELEMENT lieux        %liste;    >
+<!-- Fin parcours -->
+
+<!-- Début spécialité -->
+<!ELEMENT specialite  ((responsables,nom,description,parcours+)|parcours)  >
+<!-- Fin spécialité -->	
+
+<!-- Début semestre -->
+<!ELEMENT semestre (bloc+)>
+<!ATTLIST semestre num CDATA #REQUIRED>
+<!ELEMENT bloc (unite|ref-unite)+   >
+<!ATTLIST bloc role (obligatoires|options) #REQUIRED>
+<!-- Fin semestre -->
+
+<!-- Début master -->
+<!ELEMENT master (intervenants,specialite*) >
+<!-- Fin master -->
+
+<!-- Début unite -->
+<!ELEMENT unite (nom,credits,resume,plan,ref-intervenant*) >
+<!ATTLIST unite  %id_required;>
+
+<!ELEMENT credits         (#PCDATA)  >
+<!ELEMENT resume          %miseenformebloc;  >
+<!ELEMENT plan            %liste; >
+<!ELEMENT ref-intervenant EMPTY      >
+<!ATTLIST ref-intervenant ref IDREF #REQUIRED>
+<!-- Fin unite -->
+
+<!-- Début ref-unite -->
+<!ELEMENT ref-unite EMPTY>
+<!ATTLIST ref-unite ref IDREF #REQUIRED>
+<!-- Fin ref-unite -->
+
+<!-- Début intervenants -->
+<!ELEMENT intervenants (intervenant*)>
+<!ELEMENT intervenant  (nom,email,siteweb)>
+<!ATTLIST intervenant  %id_required;>
+
+<!ELEMENT email   (#PCDATA)>
+<!ELEMENT siteweb (#PCDATA)>
+<!-- Fin intervenants -->
