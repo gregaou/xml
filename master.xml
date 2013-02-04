@@ -7,6 +7,11 @@
 			<email>noel.novelli@lif.univ-mrs.fr</email>
 			<siteweb>http://www.lif.univ-mrs.fr/spip.php?article110</siteweb>
 		</intervenant>
+		<intervenant id="nedseb">
+			<nom>Nedjar</nom>
+			<email>sebastien.nedjar@lif.univ-mrs.fr</email>
+			<siteweb></siteweb>
+		</intervenant>
 	</intervenants>
 	<specialite>
 		<parcours>
@@ -147,6 +152,8 @@
 					<ref-unite ref="ENSINCU27" />
 				</bloc>
 			</semestre>
+      <semestre num="4">
+      </semestre>
 		</parcours>
 	</specialite>
 </master>

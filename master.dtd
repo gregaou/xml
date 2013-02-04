@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
-<!ENTITY luminy    "Luminy">
-<!ENTITY stjerome  "St Jérôme">
+<!ENTITY luminy    "Luminy" >
+<!ENTITY stjerome  "St Jérôme" >
 
 <!ENTITY % id_required "id  ID  #REQUIRED">
 
