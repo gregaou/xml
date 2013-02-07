@@ -31,7 +31,7 @@
 <!-- Début parcours -->
 <!ELEMENT parcours (responsables,nom,description,debouches,lieux,semestre+)>
 
-<!ELEMENT responsables %liste;    >
+<!ELEMENT responsables (ref-intervenant*)  >
 <!ELEMENT description  %miseenformebloc;  >
 <!ELEMENT debouches    %liste;    >
 <!ELEMENT lieux        %liste;    >
@@ -70,9 +70,10 @@
 
 <!-- Début intervenants -->
 <!ELEMENT intervenants (intervenant*)>
-<!ELEMENT intervenant  (nom,email,siteweb)>
+<!ELEMENT intervenant  (nom,prenom,email,siteweb)>
 <!ATTLIST intervenant  %id_required;>
 
 <!ELEMENT email   (#PCDATA)>
 <!ELEMENT siteweb (#PCDATA)>
+<!ELEMENT prenom (#PCDATA)>
 <!-- Fin intervenants -->

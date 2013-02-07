@@ -6,11 +6,11 @@
               encoding="utf-8"/>
   <xsl:strip-space elements="*"/>
   <xsl:template match="master">
-    <xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html>
-</xsl:text>
+    <xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html></xsl:text>
     <html>
       <head>
         <title>Master</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet" />
         <link href="master.css" rel="stylesheet" />
       </head>
       <body>

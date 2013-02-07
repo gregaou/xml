@@ -4,19 +4,39 @@
 	<intervenants>
 		<intervenant id="novelli">
 			<nom>Novelli</nom>
+			<prenom>Noël</prenom>
 			<email>noel.novelli@lif.univ-mrs.fr</email>
 			<siteweb>http://www.lif.univ-mrs.fr/spip.php?article110</siteweb>
 		</intervenant>
-		<intervenant id="nedseb">
+		<intervenant id="nejar">
 			<nom>Nedjar</nom>
-			<email>sebastien.nedjar@lif.univ-mrs.fr</email>
+			<prenom>Sébastien</prenom>
+			<email>sebastien.nedjar@univ-amu.fr</email>
+			<siteweb></siteweb>
+		</intervenant>
+		<intervenant id="morin">
+			<nom>Morin</nom>
+			<prenom>Rémi</prenom>
+			<email>remi.morin@univ-amu.fr</email>
+			<siteweb></siteweb>
+		</intervenant>
+		<intervenant id="lugiez">
+			<nom>Lugiez</nom>
+			<prenom>Denis</prenom>
+			<email>denis.lugiez@univ-amu.fr</email>
+			<siteweb></siteweb>
+		</intervenant>
+		<intervenant id="massat">
+			<nom>Massat</nom>
+			<prenom>Jean-luc</prenom>
+			<email>jean-luc.massat@univ-amu.fr</email>
 			<siteweb></siteweb>
 		</intervenant>
 	</intervenants>
 	<specialite>
 		<parcours>
 			<responsables>
-				<item>Rémi Morin</item>
+				<ref-intervenant ref="morin" />
 			</responsables>
 			<nom>Master 1</nom>
 			<description>
@@ -60,8 +80,8 @@
 	</specialite>
 	<specialite>
 		<responsables>
-			<item>Denis LUGIEZ</item>
-			<item>Jean-Luc MASSAT</item>
+			<ref-intervenant ref="lugiez" />
+			<ref-intervenant ref="massat" />
 		</responsables>
 		<nom>Fiabilité, sécurité et intégration logicielle (FSIL)</nom>
 		<description>
@@ -73,7 +93,7 @@
 		</description>
 		<parcours>
 			<responsables>
-				<item>Denis LUGIEZ</item>
+				<ref-intervenant ref="lugiez" />
 			</responsables>
 			<nom>Fiabilité et sécurité informatique (FSI)</nom>
 			<description>
@@ -118,7 +138,7 @@
 		</parcours>
 		<parcours>
 			<responsables>
-				<item>Jean Luc MASSAT</item>
+				<ref-intervenant ref="massat" />
 			</responsables>
 			<nom>Intégration de systèmes logiciels (ISL)</nom>
 			<description>
@@ -152,8 +172,6 @@
 					<ref-unite ref="ENSINCU27" />
 				</bloc>
 			</semestre>
-      <semestre num="4">
-      </semestre>
 		</parcours>
 	</specialite>
 </master>
