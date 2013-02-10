@@ -1,0 +1,21 @@
+.sousmenu {
+	margin:0;
+	padding-left: 15px;
+	border-left: solid 1px lightgrey;
+	border-right: solid 1px lightgrey;
+}
+
+.page_header{
+	margin: 0;
+	padding: 0;
+}
+
+.page-header img {
+	display: block;
+	margin: 0 auto;
+}
+
+.navbar{
+	position :fixed;
+	float: left;
+}

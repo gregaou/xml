@@ -30,6 +30,7 @@
 
 <!-- Début parcours -->
 <!ELEMENT parcours (responsables,nom,description,debouches,lieux,semestre+)>
+<!ATTLIST parcours  %id_required;>
 
 <!ELEMENT responsables (ref-intervenant*)  >
 <!ELEMENT description  %miseenformebloc;  >
@@ -39,21 +40,23 @@
 
 <!-- Début spécialité -->
 <!ELEMENT specialite  ((responsables,nom,description,parcours+)|parcours)  >
+<!ATTLIST specialite  %id_required;>
 <!-- Fin spécialité -->	
 
 <!-- Début semestre -->
 <!ELEMENT semestre (bloc+)>
 <!ATTLIST semestre num CDATA #REQUIRED>
-<!ELEMENT bloc (unite|ref-unite)+   >
+<!ELEMENT bloc (ref-unite)+   >
 <!ATTLIST bloc role (obligatoires|options) #REQUIRED>
 <!-- Fin semestre -->
 
 <!-- Début master -->
-<!ELEMENT master (intervenants,specialite*) >
+<!ELEMENT master (intervenants,unites,specialite*) >
 <!-- Fin master -->
 
 <!-- Début unite -->
-<!ELEMENT unite (nom,credits,resume,plan,ref-intervenant*) >
+<!ELEMENT unites (unite*)>
+<!ELEMENT unite  (nom,credits,resume,plan,ref-intervenant*) >
 <!ATTLIST unite  %id_required;>
 
 <!ELEMENT credits         (#PCDATA)  >

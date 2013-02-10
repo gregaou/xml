@@ -12,42 +12,67 @@
 			<nom>Nedjar</nom>
 			<prenom>Sébastien</prenom>
 			<email>sebastien.nedjar@univ-amu.fr</email>
-			<siteweb></siteweb>
+			<siteweb/>
 		</intervenant>
 		<intervenant id="morin">
 			<nom>Morin</nom>
 			<prenom>Rémi</prenom>
 			<email>remi.morin@univ-amu.fr</email>
-			<siteweb></siteweb>
+			<siteweb/>
 		</intervenant>
 		<intervenant id="lugiez">
 			<nom>Lugiez</nom>
 			<prenom>Denis</prenom>
 			<email>denis.lugiez@univ-amu.fr</email>
-			<siteweb></siteweb>
+			<siteweb/>
 		</intervenant>
 		<intervenant id="massat">
 			<nom>Massat</nom>
 			<prenom>Jean-luc</prenom>
 			<email>jean-luc.massat@univ-amu.fr</email>
-			<siteweb></siteweb>
+			<siteweb>http://jean-luc.massat.perso.luminy.univ-amu.fr</siteweb>
 		</intervenant>
 	</intervenants>
-	<specialite>
-		<parcours>
+	<unites>
+		<unite id="ENSINCU27">
+			<nom>Anglais 2</nom>
+			<credits>3</credits>
+			<resume>
+				<p> Expression orale et écrite : exposés sur des sujets scientifiques et / ou
+					professionnels, travaux écrits. Préparation et passage du TOEIC. </p>
+			</resume>
+			<plan> </plan>
+		</unite>
+		<unite id="ENSINAU1">
+			<nom>Génie Logiciel</nom>
+			<credits>6</credits>
+			<resume>
+				<p>Le génie logiciel (software engineering) est une science de génie industriel qui
+					étudie les méthodes de travail et les bonnes pratiques des ingénieurs qui
+					développent des logiciels.</p>
+			</resume>
+			<plan>
+				<item>Processus logiciel</item>
+				<item>Spécification et conception (artefact : notation UML)</item>
+				<item>Gestion de projet</item>
+				<item>Design patterns</item>
+			</plan>
+			<ref-intervenant ref="novelli"/>
+		</unite>
+	</unites>
+	<specialite id="sM1">
+		<parcours id="pM1">
 			<responsables>
-				<ref-intervenant ref="morin" />
+				<ref-intervenant ref="morin"/>
 			</responsables>
 			<nom>Master 1</nom>
 			<description>
-				<p>
-					L'objectif de cette première année est de donner les bases indispensables 
-					permettant, en deuxième année, de choisir une spécialisation dans un 
-					domaine précis. Sur les 60 crédits de cette première année, 15 crédits 
-					correspondent à des enseignements optionnels. Ces options permettent de 
-					construire un parcours adapté. Un choix entre stage ou projet encadré est 
-					également proposé au semestre de printemps.
-				</p>
+				<p> L'objectif de cette première année est de donner les bases indispensables
+					permettant, en deuxième année, de choisir une spécialisation dans un domaine
+					précis. Sur les 60 crédits de cette première année, 15 crédits correspondent à
+					des enseignements optionnels. Ces options permettent de construire un parcours
+					adapté. Un choix entre stage ou projet encadré est également proposé au semestre
+					de printemps. </p>
 			</description>
 			<debouches>
 				<item>Possibilité de Master 2</item>
@@ -58,56 +83,36 @@
 			</lieux>
 			<semestre num="1">
 				<bloc role="obligatoires">
-					<unite id="ENSINAU1">
-						<nom>Génie Logiciel</nom>
-						<credits>6</credits>
-						<resume>
-							<p>Le génie logiciel (software engineering) est une science de génie 
-							industriel qui étudie les méthodes de travail et les bonnes
-							pratiques des ingénieurs qui développent des logiciels.</p>
-						</resume>
-						<plan>
-							<item>Processus logiciel</item>
-							<item>Spécification et conception (artefact : notation UML)</item>
-							<item>Gestion de projet</item>
-							<item>Design patterns</item>
-						</plan>
-						<ref-intervenant ref="novelli" />
-					</unite>
+					<ref-unite ref="ENSINAU1"/>
 				</bloc>
 			</semestre>
 		</parcours>
 	</specialite>
-	<specialite>
+	<specialite id="sFSIL">
 		<responsables>
-			<ref-intervenant ref="lugiez" />
-			<ref-intervenant ref="massat" />
+			<ref-intervenant ref="lugiez"/>
+			<ref-intervenant ref="massat"/>
 		</responsables>
 		<nom>Fiabilité, sécurité et intégration logicielle (FSIL)</nom>
 		<description>
-			<p>
-				Cette spécialité à finalité professionnelle est une composante
-				du Master Informatique. Elle est déclinée en deux parcours qui partagent 
-				un tronc-commun au début de la deuxième année (semestre 3).
-			</p>
+			<p> Cette spécialité à finalité professionnelle est une composante du Master
+				Informatique. Elle est déclinée en deux parcours qui partagent un tronc-commun au
+				début de la deuxième année (semestre 3). </p>
 		</description>
-		<parcours>
+		<parcours id="pFSI">
 			<responsables>
-				<ref-intervenant ref="lugiez" />
+				<ref-intervenant ref="lugiez"/>
 			</responsables>
 			<nom>Fiabilité et sécurité informatique (FSI)</nom>
 			<description>
-				<p>
-				La formation donne les principes et techniques liés à la
-			 	conception de systèmes informatiques surs dans un environnement ouvert
-			 	et hétérogène. Elle forme les étudiants aux principes et méthodes de 
-			 	développement modernes qui reposent sur des outils de prototypage, 
-			 	de test et de suivi de logiciels, avec des méthodologies normalisées. 
-			 	Elle apporte des compétences fortes en sécurité informatique dans 
-			 	les domaines liés à l'échange d'information (Web-services, protocoles 
-			 	de communication et cryptographiques,..) et à la communication entre 
-			 	systèmes (réseaux hétérogènes et applications embarquées ou distribuées).
-			 	</p>
+				<p> La formation donne les principes et techniques liés à la conception de systèmes
+					informatiques surs dans un environnement ouvert et hétérogène. Elle forme les
+					étudiants aux principes et méthodes de développement modernes qui reposent sur
+					des outils de prototypage, de test et de suivi de logiciels, avec des
+					méthodologies normalisées. Elle apporte des compétences fortes en sécurité
+					informatique dans les domaines liés à l'échange d'information (Web-services,
+					protocoles de communication et cryptographiques,..) et à la communication entre
+					systèmes (réseaux hétérogènes et applications embarquées ou distribuées). </p>
 			</description>
 			<debouches>
 				<item>Ingénieur études et développement</item>
@@ -120,43 +125,27 @@
 			</lieux>
 			<semestre num="3">
 				<bloc role="obligatoires">
-					<unite id="ENSINCU27">
-					<nom>Anglais 2</nom>
-					<credits>3</credits>
-					<resume>
-						<p>
-							Expression orale et écrite : exposés sur des sujets scientifiques
-							et / ou professionnels, travaux écrits. Préparation et passage 
-							du TOEIC.
-						</p>
-					</resume>
-					<plan>
-					</plan>
-				</unite>
+					<ref-unite ref="ENSINCU27"/>
 				</bloc>
 			</semestre>
 		</parcours>
-		<parcours>
+		<parcours id="pISL">
 			<responsables>
-				<ref-intervenant ref="massat" />
+				<ref-intervenant ref="massat"/>
 			</responsables>
 			<nom>Intégration de systèmes logiciels (ISL)</nom>
 			<description>
-				<p>
-					Le développement de l'Internet/Intranet et des applications associées a 
-					fait émerger de nouvelles normes pour la structuration des applications 
-					informatiques réparties. L'enjeu est de présenter des modèles 
-					(programmation par composants, par aspects, design pattern), des 
-					plateformes (JEE, .NET, Corba, etc.) et des outils (JAVA, SGBDOO, XML) 
-					qui offrent un cadre dans lequel les applications sont développées, 
-					validées et intégrées plus facilement.L'objectif de ce parcours est 
-					d'initier les étudiants à la conception et à la réalisation 
-					d'applications dans de tels cadres. La formation mettra plus 
-					particulièrement l'accent sur les notions d'architecture logicielle, de 
-					programmation par composants, de qualité et de fiabilité. Elle utilisera 
-					la plateforme Java Enterprise Edition pour concrétiser les concepts 
-					présentés.
-				</p>
+				<p> Le développement de l'Internet/Intranet et des applications associées a fait
+					émerger de nouvelles normes pour la structuration des applications informatiques
+					réparties. L'enjeu est de présenter des modèles (programmation par composants,
+					par aspects, design pattern), des plateformes (JEE, .NET, Corba, etc.) et des
+					outils (JAVA, SGBDOO, XML) qui offrent un cadre dans lequel les applications
+					sont développées, validées et intégrées plus facilement.L'objectif de ce
+					parcours est d'initier les étudiants à la conception et à la réalisation
+					d'applications dans de tels cadres. La formation mettra plus particulièrement
+					l'accent sur les notions d'architecture logicielle, de programmation par
+					composants, de qualité et de fiabilité. Elle utilisera la plateforme Java
+					Enterprise Edition pour concrétiser les concepts présentés. </p>
 			</description>
 			<debouches>
 				<item>Ingénieur études et développement</item>
@@ -169,7 +158,7 @@
 			</lieux>
 			<semestre num="3">
 				<bloc role="obligatoires">
-					<ref-unite ref="ENSINCU27" />
+					<ref-unite ref="ENSINCU27"/>
 				</bloc>
 			</semestre>
 		</parcours>
