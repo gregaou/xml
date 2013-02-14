@@ -27,6 +27,8 @@
             </div>
             <div class="span8">
               <xsl:call-template name="content"/>
+              <xsl:apply-templates select="//intervenants"/>
+              <xsl:apply-templates select="//unites"/>
             </div>
           </div>
         </div>
@@ -43,13 +45,13 @@
         <li>
           <xsl:choose>
             <xsl:when test="./nom">
-              <a href="#{@id}" class="menunav icon-chevron-right">
+              <a href="#{@id}" class="menunav">
                 <xsl:value-of select="./nom"/>
               </a>
               <ul class="nav nav-tabs nav-pills sousmenu">
                 <xsl:for-each select="./parcours">
                   <li>
-                    <a href="#{@id}" class="menunav icon-chevron-right">
+                    <a href="#{@id}" class="menunav">
                       <xsl:value-of select="./nom"/>
                     </a>
                   </li>
@@ -57,7 +59,7 @@
               </ul>
             </xsl:when>
             <xsl:otherwise>
-              <a href="#{./parcours/@id}" class="menunav icon-chevron-right">
+              <a href="#{./parcours/@id}"  class="menunav">
                 <xsl:value-of select="./parcours/nom"/>
               </a>
             </xsl:otherwise>
@@ -65,7 +67,7 @@
         </li>
       </xsl:for-each>
       <li>
-        <a href="#intervenant" class="menunav">Intervenants</a>
+        <a href="#intervenants" class="menunav">Intervenants</a>
       </li>
     </ul>
   </xsl:template>
@@ -75,20 +77,56 @@
   </xsl:template>
 
   <xsl:template match="intervenants">
-    <div id="intervenants" class="span12">
+    <div id="intervenants" class="intervenants">
+      <h1>Intervenants</h1>
+      <table class="table table-striped table-bordered">
       <xsl:for-each select="./intervenant">
         <xsl:sort select="nom"/>
-        <ul>
-          <li>
-            <a href="mailto:{email}">
-              <xsl:value-of select="nom"/>
+        <tr>
+          <td>
+            <a href="#{@id}" class="lien">
+            <xsl:value-of select="nom"/>
+            <xsl:text disable-output-escaping="yes">&amp;nbsp;</xsl:text>
+            <xsl:value-of select="prenom"/> 
             </a>
+          </td>
+          <td>
+            <xsl:if test="not(email='')">
+              <a href="mailto:{email}" class="icon-envelope" />
+            </xsl:if>
+          </td>
+          <td>
             <xsl:if test="not(siteweb='')">
               <a href="{siteweb}" class="icon-globe"/>
             </xsl:if>
-          </li>
-        </ul>
+          </td>
+        </tr>
       </xsl:for-each>
+      </table>
+    </div>
+    <xsl:for-each select="./intervenant">
+       <xsl:call-template name="sintervenant"></xsl:call-template>
+    </xsl:for-each>
+  </xsl:template>
+  
+  <xsl:template name="sintervenant">
+    <div class="intervenant" id="{@id}">
+      <h1><xsl:value-of select="nom"/><xsl:text> </xsl:text><xsl:value-of select="prenom"/></h1>
+      <h2>Informations</h2>
+      <ul>
+        <xsl:if test="not(email='')">
+          <li><a href="mailto:{email}">Email</a></li>
+        </xsl:if>
+        <xsl:if test="not(siteweb='')">
+          <li><a href="{siteweb}">Site Web</a></li>
+        </xsl:if>
+      </ul>
+      <h2>Intervenant des unités d'enseignement :</h2>
+      <ul>
+        <xsl:for-each select="/master/unites/unite/ref-intervenant[@ref = current()/@id]">
+          <li><a href="#{../@id}" class="lien"><xsl:value-of select="../nom"/></a></li>
+        </xsl:for-each>
+      </ul>
     </div>
   </xsl:template>
 
@@ -99,6 +137,33 @@
       </h1>
     </div>
     <xsl:apply-templates select="parcours"/>
+  </xsl:template>
+  
+  <xsl:template match="unites">
+    <xsl:for-each select="./unite">
+      <div id="{@id}" class="unite">
+        <h1><xsl:value-of select="nom"/></h1>
+        <h2>Informations</h2>
+        <h3>Credits</h3>
+        <xsl:value-of select="credits"/>
+        <h3>Résumé</h3>
+        <xsl:value-of select="resume"/>
+        <h3>Plan</h3>
+          <ul>
+            <xsl:for-each select="plan/item">
+              <li>
+                <xsl:value-of select="."/>
+              </li>
+            </xsl:for-each>
+          </ul>
+        <h3>Intervenants</h3>
+        <xsl:for-each select="ref-intervenant">
+          <li>
+            <a href="#{@ref}" class="lien"><xsl:value-of select="/master/intervenants/intervenant[@id = current()/@ref]/nom"/></a>
+          </li>
+        </xsl:for-each>
+      </div>     
+    </xsl:for-each>
   </xsl:template>
 
   <xsl:template match="parcours">
@@ -144,7 +209,7 @@
     <ul>
       <xsl:for-each select="ref-intervenant">
         <li>
-          <xsl:value-of select="/master/intervenants/intervenant[@id = current()/@ref]/nom"/>
+          <a href="#{@ref}" class="lien"><xsl:value-of select="/master/intervenants/intervenant[@id = current()/@ref]/nom"/></a>
         </li>
       </xsl:for-each>
     </ul>

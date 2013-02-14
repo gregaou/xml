@@ -1,14 +1,20 @@
+function hideall() {
+	$(".parcours, .specialite, .intervenants, .intervenant, .unite").hide();
+}
+
 $(".menunav").click(function () {
-	$(".parcours, .specialite").hide();
+	hideall();
 	$(".menunav").parent().removeClass("active");
 	$(this).parent().addClass("active");
 	$($(this).attr("href")).fadeIn();
 });
 
-$(document).ready(function() {
-	$(".parcours, .specialite").hide();
-	$('.navbar').affix();
-	$('[data-spy="affix"]').each(function () {
-  $(this).affix('refresh')
+$(".lien").click(function () {
+	hideall();
+	$($(this).attr("href")).fadeIn();
 });
+
+
+$(document).ready(function() {
+	hideall();
 });
