@@ -15,6 +15,19 @@ body {
    background: #fff;
 }
 
+.parcours,
+.specialite,
+.intervenants,
+.intervenant,
+.unite
+{
+   padding: 15px;
+   border: 1px solid transparent;
+   -webkit-border-radius: 4px 4px 0 0;
+   -moz-border-radius: 4px 4px 0 0;
+   border-radius: 4px 4px 0 0;
+}
+
 .sousmenu {
 	margin:0;
 	padding-left: 15px;
