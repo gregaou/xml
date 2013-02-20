@@ -59,7 +59,7 @@
               </ul>
             </xsl:when>
             <xsl:otherwise>
-              <a href="#{./parcours/@id}"  class="menunav">
+              <a href="#{./parcours/@id}" class="menunav">
                 <xsl:value-of select="./parcours/nom"/>
               </a>
             </xsl:otherwise>
@@ -80,60 +80,86 @@
     <div id="intervenants" class="intervenants">
       <h1>Intervenants</h1>
       <table class="table table-striped table-bordered">
-      <xsl:for-each select="./intervenant">
-        <xsl:sort select="nom"/>
-        <tr>
-          <td>
-            <a href="#{@id}" class="lien">
-            <xsl:value-of select="nom"/>
-            <xsl:text disable-output-escaping="yes">&amp;nbsp;</xsl:text>
-            <xsl:value-of select="prenom"/> 
-            </a>
-          </td>
-          <td>
-            <xsl:if test="not(email='')">
-              <a href="mailto:{email}" class="icon-envelope" />
-            </xsl:if>
-          </td>
-          <td>
-            <xsl:if test="not(siteweb='')">
-              <a href="{siteweb}" class="icon-globe"/>
-            </xsl:if>
-          </td>
-        </tr>
-      </xsl:for-each>
+        <xsl:for-each select="./intervenant">
+          <xsl:sort select="nom"/>
+          <tr>
+            <td>
+              <a href="#{@id}" class="lien">
+                <xsl:value-of select="nom"/>
+                <xsl:text disable-output-escaping="yes">&amp;nbsp;</xsl:text>
+                <xsl:value-of select="prenom"/>
+              </a>
+            </td>
+            <td>
+              <xsl:if test="not(email='')">
+                <a href="mailto:{email}" class="icon-envelope"/>
+              </xsl:if>
+            </td>
+            <td>
+              <xsl:if test="not(siteweb='')">
+                <a href="{siteweb}" class="icon-globe"/>
+              </xsl:if>
+            </td>
+          </tr>
+        </xsl:for-each>
       </table>
     </div>
     <xsl:for-each select="./intervenant">
-       <xsl:call-template name="sintervenant"></xsl:call-template>
+      <xsl:call-template name="sintervenant"/>
     </xsl:for-each>
   </xsl:template>
-  
+
   <xsl:template name="sintervenant">
     <div class="intervenant" id="{@id}">
-      <h1><xsl:value-of select="nom"/><xsl:text> </xsl:text><xsl:value-of select="prenom"/></h1>
+      <h1>
+        <xsl:value-of select="nom"/>
+        <xsl:text> </xsl:text>
+        <xsl:value-of select="prenom"/>
+      </h1>
       <h2>Informations</h2>
       <ul>
         <xsl:if test="not(email='')">
-          <li><a href="mailto:{email}">Email</a></li>
+          <li>
+            <a href="mailto:{email}">Email</a>
+          </li>
         </xsl:if>
         <xsl:if test="not(siteweb='')">
-          <li><a href="{siteweb}">Site Web</a></li>
+          <li>
+            <a href="{siteweb}">Site Web</a>
+          </li>
         </xsl:if>
       </ul>
-      <h3>Intervenant des unités d'enseignement :</h3>
+      <xsl:if test="/master/unites/unite/ref-intervenant[@ref = current()/@id]">
+        <h3>Intervenant des unités d'enseignement :</h3>
+      </xsl:if>
       <ul>
         <xsl:for-each select="/master/unites/unite/ref-intervenant[@ref = current()/@id]">
-          <li><a href="#{../@id}" class="lien"><xsl:value-of select="../nom"/></a></li>
+          <li>
+            <a href="#{../@id}" class="lien">
+              <xsl:value-of select="../nom"/>
+            </a>
+          </li>
         </xsl:for-each>
       </ul>
-      <h3>Responsables des parcours/specialités :</h3>
+      <xsl:if
+        test="/master/specialite/responsables/ref-intervenant[@ref = current()/@id] or /master/specialite/parcours/responsables/ref-intervenant[@ref = current()/@id]">
+        <h3>Responsables des parcours/specialités :</h3>
+      </xsl:if>
       <ul>
         <xsl:for-each select="/master/specialite/responsables/ref-intervenant[@ref = current()/@id]">
-          <li><a href="#{../../@id}" class="lien"><xsl:value-of select="../../nom"/></a></li>
+          <li>
+            <a href="#{../../@id}" class="lien">
+              <xsl:value-of select="../../nom"/>
+            </a>
+          </li>
         </xsl:for-each>
-        <xsl:for-each select="/master/specialite/parcours/responsables/ref-intervenant[@ref = current()/@id]">
-          <li><a href="#{../../@id}" class="lien"><xsl:value-of select="../../nom"/></a></li>
+        <xsl:for-each
+          select="/master/specialite/parcours/responsables/ref-intervenant[@ref = current()/@id]">
+          <li>
+            <a href="#{../../@id}" class="lien">
+              <xsl:value-of select="../../nom"/>
+            </a>
+          </li>
         </xsl:for-each>
       </ul>
     </div>
@@ -148,35 +174,39 @@
       <p>
         <xsl:value-of select="description"/>
       </p>
-      <xsl:apply-templates select="responsables"/>      
+      <xsl:apply-templates select="responsables"/>
     </div>
     <xsl:apply-templates select="parcours"/>
   </xsl:template>
-  
+
   <xsl:template match="unites">
     <xsl:for-each select="./unite">
       <div id="{@id}" class="unite">
-        <h1><xsl:value-of select="nom"/></h1>
+        <h1>
+          <xsl:value-of select="nom"/>
+        </h1>
         <h2>Informations</h2>
         <h3>Credits</h3>
         <xsl:value-of select="credits"/>
         <h3>Résumé</h3>
         <xsl:value-of select="resume"/>
         <h3>Plan</h3>
-          <ul>
-            <xsl:for-each select="plan/item">
-              <li>
-                <xsl:value-of select="."/>
-              </li>
-            </xsl:for-each>
-          </ul>
+        <ul>
+          <xsl:for-each select="plan/item">
+            <li>
+              <xsl:value-of select="."/>
+            </li>
+          </xsl:for-each>
+        </ul>
         <h3>Intervenants</h3>
         <xsl:for-each select="ref-intervenant">
           <li>
-            <a href="#{@ref}" class="lien"><xsl:value-of select="/master/intervenants/intervenant[@id = current()/@ref]/nom"/></a>
+            <a href="#{@ref}" class="lien">
+              <xsl:value-of select="/master/intervenants/intervenant[@id = current()/@ref]/nom"/>
+            </a>
           </li>
         </xsl:for-each>
-      </div>     
+      </div>
     </xsl:for-each>
   </xsl:template>
 
@@ -223,7 +253,9 @@
     <ul>
       <xsl:for-each select="ref-intervenant">
         <li>
-          <a href="#{@ref}" class="lien"><xsl:value-of select="/master/intervenants/intervenant[@id = current()/@ref]/nom"/></a>
+          <a href="#{@ref}" class="lien">
+            <xsl:value-of select="/master/intervenants/intervenant[@id = current()/@ref]/nom"/>
+          </a>
         </li>
       </xsl:for-each>
     </ul>
@@ -244,7 +276,9 @@
   </xsl:template>
 
   <xsl:template match="unite">
-    <h4><a href="#{@id}" class="lien"><xsl:value-of select="@id"/> : <xsl:value-of select="nom"/></a></h4>
+    <h4>
+      <a href="#{@id}" class="lien"><xsl:value-of select="@id"/> : <xsl:value-of select="nom"/></a>
+    </h4>
   </xsl:template>
 
   <xsl:template match="resume">
