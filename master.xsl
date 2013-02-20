@@ -121,10 +121,19 @@
           <li><a href="{siteweb}">Site Web</a></li>
         </xsl:if>
       </ul>
-      <h2>Intervenant des unités d'enseignement :</h2>
+      <h3>Intervenant des unités d'enseignement :</h3>
       <ul>
         <xsl:for-each select="/master/unites/unite/ref-intervenant[@ref = current()/@id]">
           <li><a href="#{../@id}" class="lien"><xsl:value-of select="../nom"/></a></li>
+        </xsl:for-each>
+      </ul>
+      <h3>Responsables des parcours/specialités :</h3>
+      <ul>
+        <xsl:for-each select="/master/specialite/responsables/ref-intervenant[@ref = current()/@id]">
+          <li><a href="#{../../@id}" class="lien"><xsl:value-of select="../../nom"/></a></li>
+        </xsl:for-each>
+        <xsl:for-each select="/master/specialite/parcours/responsables/ref-intervenant[@ref = current()/@id]">
+          <li><a href="#{../../@id}" class="lien"><xsl:value-of select="../../nom"/></a></li>
         </xsl:for-each>
       </ul>
     </div>
@@ -135,6 +144,11 @@
       <h1>
         <xsl:value-of select="nom"/>
       </h1>
+      <h2>Description</h2>
+      <p>
+        <xsl:value-of select="description"/>
+      </p>
+      <xsl:apply-templates select="responsables"/>      
     </div>
     <xsl:apply-templates select="parcours"/>
   </xsl:template>
@@ -230,11 +244,7 @@
   </xsl:template>
 
   <xsl:template match="unite">
-    <h4><xsl:value-of select="@id"/> : <xsl:value-of select="nom"/></h4>
-    <p>Crédits : <xsl:value-of select="credits"/></p>
-    <h5>Résumé</h5>
-    <xsl:apply-templates select="resume"/>
-    <xsl:apply-templates select="plan"/>
+    <h4><a href="#{@id}" class="lien"><xsl:value-of select="@id"/> : <xsl:value-of select="nom"/></a></h4>
   </xsl:template>
 
   <xsl:template match="resume">
