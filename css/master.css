@@ -1,3 +1,33 @@
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+
+body {
+   background-image: url(http://www.colourlovers.com/patternPreview/308306/F1F1F1/E8E8E8/0080C0/FFFFFF/E7E7E7.png);
+}
+
+.nav,
+.page-header,
+.parcours,
+.specialite,
+.intervenants,
+.intervenant,
+.unite
+{
+   background: #fff;
+}
+
+.parcours,
+.specialite,
+.intervenants,
+.intervenant,
+.unite
+{
+   padding: 15px;
+   border: 1px solid transparent;
+   -webkit-border-radius: 4px 4px 0 0;
+   -moz-border-radius: 4px 4px 0 0;
+   border-radius: 4px 4px 0 0;
+}
+
 .sousmenu {
 	margin:0;
 	padding-left: 15px;
@@ -18,4 +48,44 @@
 .navbar{
 	position :fixed;
 	float: left;
+}
+
+.parcours h1,
+.parcours h2,
+.parcours h3,
+.parcours h4,
+.parcours h5,
+.parcours h6,
+.specialites h1,
+.specialites h2,
+.specialites h3,
+.specialites h4,
+.specialites h5,
+.specialites h6,
+.specialite h1,
+.specialite h2,
+.specialite h3,
+.specialite h4,
+.specialite h5,
+.specialite h6,
+.intervenants h1,
+.intervenants h2,
+.intervenants h3,
+.intervenants h4,
+.intervenants h5,
+.intervenants h6,
+.intervenant h1,
+.intervenant h2,
+.intervenant h3,
+.intervenant h4,
+.intervenant h5,
+.intervenant h6,
+.unite h1,
+.unite h2,
+.unite h3,
+.unite h4,
+.unite h5,
+.unite h6 
+{
+   font-family: Oswald, sans-serif;
 }
