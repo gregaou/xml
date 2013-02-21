@@ -69,6 +69,8 @@
       </xsl:for-each>
       <li>
         <a href="#intervenants" class="menunav">Intervenants</a>
+      </li>
+      <li>
         <a href="#unites" class="menunav">Unités</a>
       </li>
     </ul>
@@ -182,6 +184,25 @@
   </xsl:template>
 
   <xsl:template match="unites">
+    <div class="unites" id="unites">
+      <h1>Liste des unités par références</h1>
+      <xsl:for-each select="./unite">
+        <xsl:sort select="@id"/>
+        <a href="#{@id}" class="lien">
+          <xsl:value-of select="@id"/>
+        </a><xsl:text> </xsl:text>
+      </xsl:for-each>
+      <h1>Liste des unités par nom</h1>
+      <table class="table table-striped">
+        <xsl:for-each select="./unite">
+          <xsl:sort select="nom"/>
+          <tr>
+            <td><xsl:value-of select="nom"/></td>
+            <td><a href="#{@id}" class="lien"><xsl:value-of select="@id"/></a></td>
+          </tr>
+        </xsl:for-each>
+      </table>
+    </div>
     <xsl:for-each select="./unite">
       <div id="{@id}" class="unite">
         <h1>
@@ -290,22 +311,24 @@
   </xsl:template>
 
   <xsl:template name="faire-une-liste">
-     <xsl:param name="objets" />
-     <xsl:param name="nom" />
-     <h4><xsl:value-of select="$nom" /></h4>
-     <xsl:for-each select="$objets">
-        <xsl:apply-templates select="." mode="ref" />
-     </xsl:for-each>
+    <xsl:param name="objets"/>
+    <xsl:param name="nom"/>
+    <h4>
+      <xsl:value-of select="$nom"/>
+    </h4>
+    <xsl:for-each select="$objets">
+      <xsl:apply-templates select="." mode="ref"/>
+    </xsl:for-each>
   </xsl:template>
 
-<!--
+  <!--
   <xsl:call-template name="faire-une-liste">
      <xsl:with-param name="objets" value="//unite[credits = 3]" />
      <xsl:with-param name="nom" value="Liste des UE de 3 crédits" />
   </xsl:call-template>
 -->
 
-<!--
+  <!--
   <xsl:call-template name="faire-une-liste">
   <xsl:with-param name="objets" value="//[count(item) = 1 and item = &luminy;]" />
      <xsl:with-param name="nom" value="Intervenants n'enseignants qu'à Luminy" />

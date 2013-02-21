@@ -10,7 +10,8 @@ body {
 .specialite,
 .intervenants,
 .intervenant,
-.unite
+.unite,
+.unites
 {
    background: #fff;
 }
@@ -19,7 +20,8 @@ body {
 .specialite,
 .intervenants,
 .intervenant,
-.unite
+.unite,
+.unites
 {
    padding: 15px;
    border: 1px solid transparent;
@@ -85,7 +87,13 @@ body {
 .unite h3,
 .unite h4,
 .unite h5,
-.unite h6 
+.unite h6 ,
+.unites h1,
+.unites h2,
+.unites h3,
+.unites h4,
+.unites h5,
+.unites h6 
 {
    font-family: Oswald, sans-serif;
 }

@@ -1,5 +1,5 @@
 function hideall() {
-	$(".parcours, .specialite, .intervenants, .intervenant, .unite").hide();
+	$(".parcours, .specialite, .intervenants, .intervenant, .unite, .unites").hide();
 }
 
 $(".menunav").click(function () {
