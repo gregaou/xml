@@ -287,17 +287,5 @@
     </p>
   </xsl:template>
 
-  <xsl:template match="plan">
-    <h5>Plan du cours</h5>
-    <ul>
-      <xsl:for-each select="item">
-        <li>
-          <xsl:value-of select="."/>
-        </li>
-      </xsl:for-each>
-    </ul>
-  </xsl:template>
-
-
 
 </xsl:stylesheet>

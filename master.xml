@@ -32,6 +32,60 @@
 			<email>jean-luc.massat@univ-amu.fr</email>
 			<siteweb>http://jean-luc.massat.perso.luminy.univ-amu.fr</siteweb>
 		</intervenant>
+		<intervenant id="bechet">
+			<nom>Bechet</nom>
+			<prenom>Frédéric</prenom>
+			<email>frederic.BECHET@univ-amu.fr</email>
+			<siteweb/>
+		</intervenant>
+		<intervenant id="boi">
+			<nom>Boi</nom>
+			<prenom>Jean-Marc</prenom>
+			<email>jean-marc.boi@univ-amu.fr</email>
+			<siteweb/>
+		</intervenant>
+		<intervenant id="boucelma">
+			<nom>Boucelma</nom>
+			<prenom>Omar</prenom>
+			<email>omar.boucelma@univ-amu.fr</email>
+			<siteweb/>
+		</intervenant>
+		<intervenant id="demongodin">
+			<nom>Demongodin</nom>
+			<prenom>Isabelle</prenom>
+			<email>isabel.demongodin@univ-amu.fr</email>
+			<siteweb/>
+		</intervenant>
+		<intervenant id="habet">
+			<nom>Habet</nom>
+			<prenom>Djamal</prenom>
+			<email>djamal.habet@univ-amu.fr</email>
+			<siteweb/>
+		</intervenant>
+		<intervenant id="olivetti">
+			<nom>Olivetti</nom>
+			<prenom>Nicola</prenom>
+			<email>nicola.olivetti@univ-amu.fr</email>
+			<siteweb/>
+		</intervenant>
+		<intervenant id="outbib">
+			<nom>Outbib</nom>
+			<prenom>Rachid</prenom>
+			<email>rachid.outbib@univ-amu.fr</email>
+			<siteweb/>
+		</intervenant>
+		<intervenant id="ralaivola">
+			<nom>Ralaivola</nom>
+			<prenom>Hery Liva</prenom>
+			<email>hery-liva.ralaivola@univ-amu.fr</email>
+			<siteweb/>
+		</intervenant>
+		<intervenant id="vaxes">
+			<nom>Vaxes</nom>
+			<prenom>Yann</prenom>
+			<email>yann.vaxes@univ-amu.fr</email>
+			<siteweb/>
+		</intervenant>
 	</intervenants>
 	<unites>
 		<unite id="ENSINCU27">
@@ -42,6 +96,38 @@
 					professionnels, travaux écrits. Préparation et passage du TOEIC. </p>
 			</resume>
 			<plan> </plan>
+		</unite>
+		<unite id="ENSISCU1">
+			<nom>AU4 : Classification, apprentissage et décision</nom>
+			<credits>6</credits>
+			<resume>
+				<p>Méthodes non supervisées et supervisées, classification Bayésienne, évaluation et validation, logique floue</p>
+			</resume>
+			<plan></plan>
+		</unite>
+		<unite id="ENSINCU40">
+			<nom>Administration et alimentation de BD</nom>
+			<credits>3</credits>
+			<resume>
+				<p>Architecture d’un SGBD (Oracle). Création, confidentialité, optimisation et sécurité d’une base de données. Migration de bases de données : techniques usuelles, maintenance de l’inter-dépendance entre bases de données. Alimentation, nettoyage et sélection des données en vue d'analyses.</p>
+			</resume>
+			<plan></plan>
+		</unite>
+		<unite id="ENSINCU36">
+			<nom>Administration système et réseau</nom>
+			<credits>3</credits>
+			<resume>
+				<p>L'objectif est de préparer les étudiants à l'administration d'un réseau d'ordinateurs. L'accent sera mis sur les aspects pratiques et concrets de l'administration d'un réseau d'entreprise pour les systèmes UNIX et Windows. A ce titre, une maquette constituée de plusieurs serveurs et stations sous Windows 2000/XP/Linux sera montée par les étudiants.</p>
+			</resume>
+			<plan></plan>
+		</unite>
+		<unite id="ENSINBU13">
+			<nom>Algorithme à performance garantie</nom>
+			<credits>3</credits>
+			<resume>
+				<p>- Algorithmes d'approximation de nature combinatoire pour les problèmes NP-complets suivants : Voyageur de Commerce, arbre de Steiner, ordonnancement de taches, clustering, p-centres, sac à dos, bin packing, couverture d'ensemble, la plus courte sur-séquence commune ; - FPTAS et PTAS (ordonnancement de taches et sac à dos) ; - Algorithmes d'approximation par programmation linéaire : l'arrondi et la méthode primale-duale (MAXSAT, couverture d'ensemble, multicoupes et multiflots dans les arbres) ; - Algorithmes en ligne et compétitivité : la pagination et les k-serveurs.</p>
+			</resume>
+			<plan></plan>
 		</unite>
 		<unite id="ENSINAU1">
 			<nom>Génie Logiciel</nom>
