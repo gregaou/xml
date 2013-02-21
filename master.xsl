@@ -5,6 +5,7 @@
 
   <xsl:variable name="title">Master - Département Informatique de Luminy"</xsl:variable>
   <xsl:template match="/">
+
     <xsl:text disable-output-escaping="yes">&lt;!DOCTYPE html></xsl:text>
     <html>
       <head>
@@ -17,7 +18,7 @@
       <body>
         <div class="row-fluid">
           <div class="page-header">
-            <img src="img/banniere2.png" alt="Logo DIL" title="$title"/>
+            <img src="img/banniere3.png" alt="Logo DIL" title="$title"/>
           </div>
         </div>
         <div class="container">
@@ -287,5 +288,27 @@
     </p>
   </xsl:template>
 
+  <xsl:template name="faire-une-liste">
+     <xsl:param name="objets" />
+     <xsl:param name="nom" />
+     <h4><xsl:value-of select="$nom" /></h4>
+     <xsl:for-each select="$objets">
+        <xsl:apply-templates select="." mode="ref" />
+     </xsl:for-each>
+  </xsl:template>
+
+<!--
+  <xsl:call-template name="faire-une-liste">
+     <xsl:with-param name="objets" value="//unite[credits = 3]" />
+     <xsl:with-param name="nom" value="Liste des UE de 3 crédits" />
+  </xsl:call-template>
+-->
+
+<!--
+  <xsl:call-template name="faire-une-liste">
+  <xsl:with-param name="objets" value="//[count(item) = 1 and item = &luminy;]" />
+     <xsl:with-param name="nom" value="Intervenants n'enseignants qu'à Luminy" />
+  </xsl:call-template>
+-->
 
 </xsl:stylesheet>
