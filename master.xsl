@@ -69,6 +69,7 @@
       </xsl:for-each>
       <li>
         <a href="#intervenants" class="menunav">Intervenants</a>
+        <a href="#unites" class="menunav">Unités</a>
       </li>
     </ul>
   </xsl:template>

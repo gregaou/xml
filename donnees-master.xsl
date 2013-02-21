@@ -10,7 +10,7 @@
             <unite id="{@id}">
                <nom><xsl:value-of select="info[@nom='nom']/@value"/></nom>
                <credits><xsl:value-of select="info[@nom='nb_credits']/@value"/></credits>
-               <resume><xsl:copy-of select="info[@nom='contenu']/*"/></resume>
+               <resume><xsl:copy-of select="string(info[@nom='contenu']/*)"/></resume>
                <xsl:for-each select="info[@nom='responsables']">
                <!-- TODO -->
                </xsl:for-each>
