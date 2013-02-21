@@ -1,0 +1,17 @@
+
+<!ELEMENT objets	(objet*) >
+<!ELEMENT objet		(info*) >
+<!ELEMENT info		(p|ul|ol)* >
+<!ATTLIST info nom	NMTOKEN #REQUIRED >
+<!ATTLIST info value	CDATA #IMPLIED >
+<!ATTLIST objet type	NMTOKEN #REQUIRED >
+<!ATTLIST objet id	ID #REQUIRED >
+<!ELEMENT ol		(li*) >
+<!ELEMENT ul		(li*) >
+<!ELEMENT li		(t|b|i|u|br)* >
+<!ELEMENT p		(t|b|i|u|br)* >
+<!ELEMENT t		(#PCDATA) >
+<!ELEMENT b		(#PCDATA) >
+<!ELEMENT i		(#PCDATA) >
+<!ELEMENT u		(#PCDATA) >
+<!ELEMENT br		EMPTY >
