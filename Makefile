@@ -1,8 +1,8 @@
-DTD 		= master.dtd
-XML 		= master.xml
-SCHEMA 	= 
+DTD			= master.dtd
+XML			= master.xml
+SCHEMA	= 
 HTML    = www/index.html
-XSL 		= master.xsl
+XSL			= master.xsl
 
 all: dtd xsd web tidy xq java
 	
