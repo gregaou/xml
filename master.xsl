@@ -190,15 +190,22 @@
         <xsl:sort select="@id"/>
         <a href="#{@id}" class="lien">
           <xsl:value-of select="@id"/>
-        </a><xsl:text> </xsl:text>
+        </a>
+        <xsl:text> </xsl:text>
       </xsl:for-each>
       <h1>Liste des unités par nom</h1>
       <table class="table table-striped">
         <xsl:for-each select="./unite">
           <xsl:sort select="nom"/>
           <tr>
-            <td><xsl:value-of select="nom"/></td>
-            <td><a href="#{@id}" class="lien"><xsl:value-of select="@id"/></a></td>
+            <td>
+              <xsl:value-of select="nom"/>
+            </td>
+            <td>
+              <a href="#{@id}" class="lien">
+                <xsl:value-of select="@id"/>
+              </a>
+            </td>
           </tr>
         </xsl:for-each>
       </table>
@@ -213,22 +220,16 @@
         <xsl:value-of select="credits"/>
         <h3>Résumé</h3>
         <xsl:value-of select="resume"/>
-        <h3>Plan</h3>
-        <ul>
-          <xsl:for-each select="plan/item">
+        <xsl:if test="count(ref-intervenant) != 0">
+          <h3>Intervenants</h3>
+          <xsl:for-each select="ref-intervenant">
             <li>
-              <xsl:value-of select="."/>
+              <a href="#{@ref}" class="lien">
+                <xsl:value-of select="/master/intervenants/intervenant[@id = current()/@ref]/nom"/>
+              </a>
             </li>
           </xsl:for-each>
-        </ul>
-        <h3>Intervenants</h3>
-        <xsl:for-each select="ref-intervenant">
-          <li>
-            <a href="#{@ref}" class="lien">
-              <xsl:value-of select="/master/intervenants/intervenant[@id = current()/@ref]/nom"/>
-            </a>
-          </li>
-        </xsl:for-each>
+        </xsl:if>
       </div>
     </xsl:for-each>
   </xsl:template>

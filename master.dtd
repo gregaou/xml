@@ -56,7 +56,7 @@
 
 <!-- Début unite -->
 <!ELEMENT unites (unite*)>
-<!ELEMENT unite  (nom,credits,resume,plan,ref-intervenant*) >
+<!ELEMENT unite  (nom,credits,resume,ref-intervenant*) >
 <!ATTLIST unite  %id_required;>
 
 <!ELEMENT credits         (#PCDATA)  >

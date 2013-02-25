@@ -95,7 +95,6 @@
 				<p> Expression orale et écrite : exposés sur des sujets scientifiques et / ou
 					professionnels, travaux écrits. Préparation et passage du TOEIC. </p>
 			</resume>
-			<plan> </plan>
 		</unite>
 		<unite id="ENSISCU1">
 			<nom>AU4 : Classification, apprentissage et décision</nom>
@@ -104,7 +103,6 @@
 				<p>Méthodes non supervisées et supervisées, classification Bayésienne, évaluation et
 					validation, logique floue</p>
 			</resume>
-			<plan/>
 		</unite>
 		<unite id="ENSINCU40">
 			<nom>Administration et alimentation de BD</nom>
@@ -115,7 +113,6 @@
 					usuelles, maintenance de l’inter-dépendance entre bases de données.
 					Alimentation, nettoyage et sélection des données en vue d'analyses.</p>
 			</resume>
-			<plan/>
 		</unite>
 		<unite id="ENSINCU36">
 			<nom>Administration système et réseau</nom>
@@ -127,7 +124,6 @@
 					ce titre, une maquette constituée de plusieurs serveurs et stations sous Windows
 					2000/XP/Linux sera montée par les étudiants.</p>
 			</resume>
-			<plan/>
 		</unite>
 		<unite id="ENSINBU13">
 			<nom>Algorithme à performance garantie</nom>
@@ -142,7 +138,6 @@
 					multicoupes et multiflots dans les arbres) ; - Algorithmes en ligne et
 					compétitivité : la pagination et les k-serveurs.</p>
 			</resume>
-			<plan/>
 		</unite>
 		<unite id="ENSINAU1">
 			<nom>Génie Logiciel</nom>
@@ -152,12 +147,6 @@
 					étudie les méthodes de travail et les bonnes pratiques des ingénieurs qui
 					développent des logiciels.</p>
 			</resume>
-			<plan>
-				<item>Processus logiciel</item>
-				<item>Spécification et conception (artefact : notation UML)</item>
-				<item>Gestion de projet</item>
-				<item>Design patterns</item>
-			</plan>
 			<ref-intervenant ref="novelli"/>
 		</unite>
 	</unites>
