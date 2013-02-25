@@ -3,6 +3,7 @@ XML			= master.xml
 SCHEMA	= 
 HTML    = www/index.html
 XSL			= master.xsl
+JAVA 		= ue.java
 
 all: dtd xsd web tidy xq java
 	
@@ -24,5 +25,5 @@ xq:
 	@ echo "TODO"
 
 java:
-	@ echo "TODO"
+	@ javac $(JAVA)
 
