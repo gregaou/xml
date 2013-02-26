@@ -6,19 +6,19 @@
   <xsl:variable name="title">Master - Département Informatique de Luminy"</xsl:variable>
   <xsl:template match="/">
 
-    <xsl:text disable-output-escaping="yes">&lt;!DOCTYPE html></xsl:text>
+    <xsl:text disable-output-escaping="yes">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">&#xa;</xsl:text>
     <html>
       <head>
         <title>
           <xsl:value-of select="$title"/>
         </title>
-        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-        <link href="css/master.css" rel="stylesheet" type="text/css"/>
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/master.css" rel="stylesheet" type="text/css" />
       </head>
       <body>
         <div class="row-fluid">
           <div class="page-header">
-            <img src="img/banniere3.png" alt="Logo DIL" title="$title"/>
+            <img src="img/banniere3.png" alt="Logo DIL" title="$title" />
           </div>
         </div>
         <div class="container">
@@ -41,8 +41,9 @@
   </xsl:template>
 
   <xsl:template name="menu">
-    <ul class="nav nav-tabs nav-stacked">
+    <ul class="nav nav-tabs nav-stacked" style="font-size: 12px;">
       <xsl:for-each select="//specialite">
+        <xsl:sort select="./nom"/>
         <li>
           <xsl:choose>
             <xsl:when test="./nom">
@@ -186,13 +187,15 @@
   <xsl:template match="unites">
     <div class="unites" id="unites">
       <h1>Liste des unités par références</h1>
-      <xsl:for-each select="./unite">
-        <xsl:sort select="@id"/>
-        <a href="#{@id}" class="lien">
-          <xsl:value-of select="@id"/>
-        </a>
-        <xsl:text> </xsl:text>
-      </xsl:for-each>
+      <pre style="text-align: justify;">
+        <xsl:for-each select="./unite">
+          <xsl:sort select="@id"/>
+          <a href="#{@id}" class="lien">
+            <xsl:value-of select="@id"/>
+          </a>
+          <xsl:text> </xsl:text>
+        </xsl:for-each>
+      </pre>
       <h1>Liste des unités par nom</h1>
       <table class="table table-striped">
         <xsl:for-each select="./unite">

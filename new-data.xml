@@ -1,96 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE master SYSTEM "master.dtd">
+<!DOCTYPE master SYSTEM "new_master.dtd">
 <master>
    <intervenants>
       <intervenant id="IN12068">
          <nom>HABET</nom>
          <prenom>Djamal</prenom>
          <email>djamal.habet@univ-amu.fr</email>
+         <siteweb/>
       </intervenant>
       <intervenant id="IN12316">
          <nom>DEMONGODIN</nom>
          <prenom>Isabelle</prenom>
          <email>isabel.demongodin@univ-amu.fr</email>
+         <siteweb/>
       </intervenant>
       <intervenant id="IN12544">
          <nom>BOUCELMA</nom>
          <prenom>Omar</prenom>
          <email>omar.boucelma@univ-amu.fr</email>
+         <siteweb/>
       </intervenant>
       <intervenant id="IN12632">
          <nom>OLIVETTI</nom>
          <prenom>Nicola</prenom>
          <email>nicola.olivetti@univ-amu.fr</email>
+         <siteweb/>
       </intervenant>
       <intervenant id="IN12834">
          <nom>OUTBIB</nom>
          <prenom>Rachid</prenom>
          <email>rachid.outbib@univ-amu.fr</email>
+         <siteweb/>
       </intervenant>
       <intervenant id="IN13794">
          <nom>OLIVE</nom>
          <prenom>Frédéric</prenom>
          <email>frederic.olive@univ-amu.fr</email>
+         <siteweb/>
       </intervenant>
       <intervenant id="IN16209">
          <nom>RALAIVOLA</nom>
          <prenom>Hery Liva</prenom>
          <email>hery-liva.ralaivola@univ-amu.fr</email>
+         <siteweb/>
       </intervenant>
       <intervenant id="IN18">
          <nom>MASSAT</nom>
          <prenom>Jean Luc</prenom>
          <email>jean-luc.massat@univ-amu.fr</email>
+         <siteweb/>
       </intervenant>
       <intervenant id="IN20">
          <nom>PARIS</nom>
          <prenom>Antoine</prenom>
          <email>antoine.paris@univ-amu.fr</email>
+         <siteweb/>
       </intervenant>
       <intervenant id="IN3524">
          <nom>LUGIEZ</nom>
          <prenom>Denis</prenom>
          <email>denis.lugiez@univ-amu.fr</email>
+         <siteweb/>
       </intervenant>
       <intervenant id="IN6213">
          <nom>LABOUREL</nom>
          <prenom>Arnaud</prenom>
          <email>arnaud.labourel@univ-amu.fr</email>
+         <siteweb/>
       </intervenant>
       <intervenant id="IN7001">
          <nom>CREIGNOU</nom>
          <prenom>Nadia</prenom>
          <email>nadia.creignou@univ-amu.fr</email>
+         <siteweb/>
       </intervenant>
       <intervenant id="IN7680">
          <nom>LAI</nom>
          <prenom>Claude</prenom>
          <email>claude.lai@univ-amu.fr</email>
+         <siteweb/>
       </intervenant>
       <intervenant id="IN7722">
          <nom>NOVELLI</nom>
          <prenom>Noel</prenom>
          <email>noel.novelli@univ-amu.fr</email>
+         <siteweb/>
       </intervenant>
       <intervenant id="IN8006">
          <nom>BOI</nom>
          <prenom>Jean Marc</prenom>
          <email>jean-marc.boi@univ-amu.fr</email>
+         <siteweb/>
       </intervenant>
       <intervenant id="IN8086">
          <nom>VAXES</nom>
          <prenom>Yann</prenom>
          <email>yann.vaxes@univ-amu.fr</email>
+         <siteweb/>
       </intervenant>
       <intervenant id="IN9224">
          <nom>MORIN</nom>
          <prenom>Remi</prenom>
          <email>remi.morin@univ-amu.fr</email>
+         <siteweb/>
       </intervenant>
       <intervenant id="IN9941">
          <nom>BECHET</nom>
          <prenom>Frederic</prenom>
          <email>frederic.BECHET@univ-amu.fr</email>
+         <siteweb/>
       </intervenant>
    </intervenants>
    <unites>
@@ -1393,517 +1411,647 @@
          </resume>
       </unite>
    </unites>
-   <semestre id="CPSINAST1">
-      <nom>Semestre S1</nom>
-      <credits>30</credits>
-      <numero>1</numero>
-      <structure>
-         <ref-structure id="ENSINAU1"/>
-         <ref-structure id="ENSINAU2"/>
-         <ref-structure id="ENSINAU3"/>
-         <ref-structure id="ENSINAU4"/>
-         <ref-structure id="ENSINAU5"/>
-         <ref-structure id="CPSINAX1"/>
-      </structure>
-   </semestre>
-   <semestre id="CPSINBST1">
-      <nom>Semestre S2</nom>
-      <credits>30</credits>
-      <numero>2</numero>
-      <structure>
-         <ref-structure id="ENSINBU1"/>
-         <ref-structure id="ENSINBU2"/>
-         <ref-structure id="ENSINBU3"/>
-         <ref-structure id="ENSINBU4"/>
-         <ref-structure id="ENSINBU5"/>
-         <ref-structure id="CPSINBX1"/>
-         <ref-structure id="CPSINBX2"/>
-      </structure>
-   </semestre>
-   <semestre id="CPSINCSA0">
-      <nom>Semestre S3 du M2 IF</nom>
-      <credits>30</credits>
-      <numero>3</numero>
-      <structure>
-         <ref-structure id="ENSINCU1"/>
-         <ref-structure id="ENSINCU2"/>
-         <ref-structure id="ENSINCU3"/>
-         <ref-structure id="CPSINCX1"/>
-      </structure>
-   </semestre>
-   <semestre id="CPSINCSC1">
-      <nom>Semestre S3 du parcours FSI</nom>
-      <credits>30</credits>
-      <numero>3</numero>
-      <structure>
-         <ref-structure id="CPSINCY1"/>
-         <ref-structure id="ENSINCU32"/>
-         <ref-structure id="ENSINCU33"/>
-         <ref-structure id="ENSINCU34"/>
-         <ref-structure id="ENSINCU35"/>
-         <ref-structure id="CPSINCY3"/>
-      </structure>
-   </semestre>
-   <semestre id="CPSINCSC2">
-      <nom>Semestre S3 du parcours ISL</nom>
-      <credits>30</credits>
-      <numero>3</numero>
-      <structure>
-         <ref-structure id="CPSINCY1"/>
-         <ref-structure id="ENSINCU36"/>
-         <ref-structure id="ENSINCU37"/>
-         <ref-structure id="ENSINCU38"/>
-         <ref-structure id="ENSINCU39"/>
-         <ref-structure id="ENSINCU40"/>
-         <ref-structure id="CPSINCY3"/>
-      </structure>
-   </semestre>
-   <semestre id="CPSINCSD0">
-      <nom>Semestre S3 du parcours GL</nom>
-      <credits>30</credits>
-      <numero>3</numero>
-      <structure>
-         <ref-structure id="ENSINCU41"/>
-         <ref-structure id="ENSINCU42"/>
-         <ref-structure id="ENSINCU43"/>
-         <ref-structure id="ENSINCU44"/>
-         <ref-structure id="ENSINCU45"/>
-         <ref-structure id="ENSINCU46"/>
-         <ref-structure id="ENSINCU47"/>
-         <ref-structure id="ENSINCU27"/>
-         <ref-structure id="ENSINCU28"/>
-      </structure>
-   </semestre>
-   <semestre id="CPSINCSE1">
-      <nom>Semestre S3 du parcours FED</nom>
-      <credits>30</credits>
-      <numero>3</numero>
-      <structure>
-         <ref-structure id="CPSINCY2"/>
-         <ref-structure id="ENSINCU51"/>
-         <ref-structure id="ENSINCU52"/>
-         <ref-structure id="CPSINCY3"/>
-      </structure>
-   </semestre>
-   <semestre id="CPSINCSE2">
-      <nom>Semestre S3 du parcours RO</nom>
-      <credits>30</credits>
-      <numero>3</numero>
-      <structure>
-         <ref-structure id="CPSINCY2"/>
-         <ref-structure id="ENSINCU53"/>
-         <ref-structure id="ENSINCU54"/>
-         <ref-structure id="ENSINCU55"/>
-         <ref-structure id="CPSINCY3"/>
-      </structure>
-   </semestre>
-   <semestre id="CPSINCSF0">
-      <nom>Semestre S3 du M2 RIM</nom>
-      <credits>30</credits>
-      <numero>3</numero>
-      <structure>
-         <ref-structure id="ENSINCU56"/>
-         <ref-structure id="ENSINCU57"/>
-         <ref-structure id="ENSINCU58"/>
-         <ref-structure id="ENSINCU59"/>
-         <ref-structure id="CPSINCX2"/>
-         <ref-structure id="ENSINCU66"/>
-         <ref-structure id="ENSINCU27"/>
-         <ref-structure id="ENSINCU28"/>
-         <ref-structure id="CPSINCY3"/>
-      </structure>
-   </semestre>
-   <semestre id="CPSINCSG0">
-      <nom>Semestre S3 du M2 SIR</nom>
-      <credits>30</credits>
-      <numero>3</numero>
-      <structure>
-         <ref-structure id="ENSINCU60"/>
-         <ref-structure id="ENSINCU61"/>
-         <ref-structure id="ENSINCU62"/>
-         <ref-structure id="ENSINCU63"/>
-         <ref-structure id="ENSINCU64"/>
-         <ref-structure id="ENSINCU65"/>
-         <ref-structure id="ENSINCU27"/>
-         <ref-structure id="ENSINCU28"/>
-      </structure>
-   </semestre>
-   <semestre id="CPSINDSA0">
-      <nom>Semestre S4 du M2 IF</nom>
-      <credits>30</credits>
-      <numero>4</numero>
-      <structure>
-         <ref-structure id="ENSINDU1"/>
-         <ref-structure id="ENSINDU2"/>
-      </structure>
-   </semestre>
-   <semestre id="CPSINDST1">
-      <nom>Semestre S4 des parcours à finalité professionnelle</nom>
-      <credits>30</credits>
-      <numero>4</numero>
-      <structure>
-         <ref-structure id="ENSINDU3"/>
-         <ref-structure id="ENSINDU4"/>
-      </structure>
-   </semestre>
-   <semestre id="CPSISCSC1">
-      <nom>Semestre S3 du M2 SIS parcours Informatique</nom>
-      <credits>30</credits>
-      <numero>3</numero>
-      <structure>
-         <ref-structure id="ENSISCU20"/>
-         <ref-structure id="CPSISCX3"/>
-         <ref-structure id="CPSISCX4"/>
-      </structure>
-   </semestre>
-   <semestre id="CPSISCSC2">
-      <nom>Semestre S3 du M2 SIS parcours Image</nom>
-      <credits>30</credits>
-      <numero>3</numero>
-      <structure>
-         <ref-structure id="ENSISCU20"/>
-         <ref-structure id="CPSISCX5"/>
-         <ref-structure id="CPSISCX6"/>
-      </structure>
-   </semestre>
-   <semestre id="CPSISCSC3">
-      <nom>Semestre S3 du M2 SIS parcours Systèmes</nom>
-      <credits>30</credits>
-      <numero>3</numero>
-      <structure>
-         <ref-structure id="ENSISCU20"/>
-         <ref-structure id="CPSISCX7"/>
-         <ref-structure id="CPSISCX8"/>
-      </structure>
-   </semestre>
-   <semestre id="CPSISDST2">
-      <nom>Semestre S4 du M2 SIS</nom>
-      <credits>30</credits>
-      <numero>4</numero>
-      <structure>
-         <ref-structure id="ENSISDU3"/>
-         <ref-structure id="ENSISDU4"/>
-      </structure>
-   </semestre>
-   <option id="CPSINAX1">
-      <nom>Option de 6 crédits à choisir</nom>
-      <credits>6</credits>
-      <numero/>
-      <structure>
-         <ref-structure id="ENSINAU6"/>
-         <ref-structure id="ENSINAU7"/>
-         <ref-structure id="ENSINAU8"/>
-         <ref-structure id="ENSINAU9"/>
-         <ref-structure id="ENSINAU10"/>
-         <ref-structure id="ENSINAU11"/>
-      </structure>
-   </option>
-   <option id="CPSINBX1">
-      <nom>Option de 6 crédits à choisir</nom>
-      <credits>6</credits>
-      <numero/>
-      <structure>
-         <ref-structure id="ENSINBU6"/>
-         <ref-structure id="ENSINBU7"/>
-      </structure>
-   </option>
-   <option id="CPSINBX2">
-      <nom>Option de 9 crédits à choisir</nom>
-      <credits>9</credits>
-      <numero/>
-      <structure>
-         <ref-structure id="ENSINBU8"/>
-         <ref-structure id="ENSINBU9"/>
-         <ref-structure id="ENSINBU10"/>
-         <ref-structure id="ENSINBU11"/>
-         <ref-structure id="ENSINBU12"/>
-         <ref-structure id="ENSINBU13"/>
-         <ref-structure id="ENSINBU14"/>
-      </structure>
-   </option>
-   <option id="CPSINCX1">
-      <nom>15 crédits à choisir (validation requise)</nom>
-      <credits>15</credits>
-      <numero/>
-      <structure>
-         <ref-structure id="ENSINCU4"/>
-         <ref-structure id="ENSINCU5"/>
-         <ref-structure id="ENSINCU6"/>
-         <ref-structure id="ENSINCU7"/>
-         <ref-structure id="ENSINCU8"/>
-         <ref-structure id="ENSINCU9"/>
-         <ref-structure id="ENSINCU10"/>
-         <ref-structure id="ENSINCU11"/>
-         <ref-structure id="ENSINCU12"/>
-         <ref-structure id="ENSINCU13"/>
-         <ref-structure id="ENSINCU14"/>
-         <ref-structure id="ENSINCU15"/>
-         <ref-structure id="ENSINCU16"/>
-         <ref-structure id="ENSINCU17"/>
-         <ref-structure id="ENSINCU18"/>
-         <ref-structure id="ENSINCU19"/>
-         <ref-structure id="ENSINCU20"/>
-         <ref-structure id="ENSINCU21"/>
-         <ref-structure id="ENSINCU22"/>
-         <ref-structure id="ENSINCU23"/>
-         <ref-structure id="ENSINCU24"/>
-         <ref-structure id="ENSINCU25"/>
-         <ref-structure id="ENSINCU26"/>
-      </structure>
-   </option>
-   <option id="CPSINCX2">
-      <nom>3 crédits à choisir parmi</nom>
-      <credits>3</credits>
-      <numero/>
-      <structure>
-         <ref-structure id="ENSINCU4"/>
-         <ref-structure id="ENSINCU5"/>
-         <ref-structure id="ENSINCU6"/>
-         <ref-structure id="ENSINCU7"/>
-         <ref-structure id="ENSINCU19"/>
-         <ref-structure id="ENSINCU20"/>
-         <ref-structure id="ENSINCU21"/>
-      </structure>
-   </option>
-   <option id="CPSISCX3">
-      <nom>15 crédits à choisir parmi</nom>
-      <credits>15</credits>
-      <numero/>
-      <structure>
-         <ref-structure id="ENSISCU21"/>
-         <ref-structure id="ENSISCU22"/>
-         <ref-structure id="ENSISCU23"/>
-         <ref-structure id="ENSISCU24"/>
-         <ref-structure id="ENSISCU25"/>
-         <ref-structure id="ENSISCU26"/>
-         <ref-structure id="ENSISCU27"/>
-         <ref-structure id="ENSISCU28"/>
-         <ref-structure id="ENSISCU29"/>
-         <ref-structure id="ENSISCU30"/>
-         <ref-structure id="ENSISCU31"/>
-         <ref-structure id="ENSISCU32"/>
-      </structure>
-   </option>
-   <option id="CPSISCX4">
-      <nom>9 crédits à choisir parmi</nom>
-      <credits>9</credits>
-      <numero/>
-      <structure>
-         <ref-structure id="ENSISCU1"/>
-         <ref-structure id="ENSISCU4"/>
-         <ref-structure id="ENSISCU5"/>
-         <ref-structure id="ENSISCU6"/>
-         <ref-structure id="ENSISCU7"/>
-         <ref-structure id="ENSISCU8"/>
-         <ref-structure id="ENSISCU55"/>
-         <ref-structure id="ENSISCU3"/>
-         <ref-structure id="ENSISCU2"/>
-         <ref-structure id="ENSISCU33"/>
-         <ref-structure id="ENSISCU34"/>
-         <ref-structure id="ENSISCU35"/>
-         <ref-structure id="ENSISCU36"/>
-         <ref-structure id="ENSISCU37"/>
-         <ref-structure id="ENSISCU38"/>
-         <ref-structure id="ENSISCU39"/>
-         <ref-structure id="ENSISCU40"/>
-         <ref-structure id="ENSISCU41"/>
-         <ref-structure id="ENSISCU42"/>
-         <ref-structure id="ENSISCU43"/>
-         <ref-structure id="ENSISCU44"/>
-         <ref-structure id="ENSISCU45"/>
-         <ref-structure id="ENSISCU46"/>
-      </structure>
-   </option>
-   <option id="CPSISCX5">
-      <nom>15 crédits à choisir parmi</nom>
-      <credits>15</credits>
-      <numero/>
-      <structure>
-         <ref-structure id="ENSISCU1"/>
-         <ref-structure id="ENSISCU4"/>
-         <ref-structure id="ENSISCU5"/>
-         <ref-structure id="ENSISCU6"/>
-         <ref-structure id="ENSISCU7"/>
-         <ref-structure id="ENSISCU8"/>
-         <ref-structure id="ENSISCU55"/>
-         <ref-structure id="ENSISCU3"/>
-         <ref-structure id="ENSISCU2"/>
-         <ref-structure id="ENSISCU29"/>
-      </structure>
-   </option>
-   <option id="CPSISCX6">
-      <nom>9 crédits à choisir parmi</nom>
-      <credits>9</credits>
-      <numero/>
-      <structure>
-         <ref-structure id="ENSISCU33"/>
-         <ref-structure id="ENSISCU34"/>
-         <ref-structure id="ENSISCU35"/>
-         <ref-structure id="ENSISCU36"/>
-         <ref-structure id="ENSISCU37"/>
-         <ref-structure id="ENSISCU21"/>
-         <ref-structure id="ENSISCU22"/>
-         <ref-structure id="ENSISCU23"/>
-         <ref-structure id="ENSISCU24"/>
-         <ref-structure id="ENSISCU25"/>
-         <ref-structure id="ENSISCU26"/>
-         <ref-structure id="ENSISCU27"/>
-         <ref-structure id="ENSISCU28"/>
-         <ref-structure id="ENSISCU30"/>
-         <ref-structure id="ENSISCU31"/>
-         <ref-structure id="ENSISCU32"/>
-         <ref-structure id="ENSISCU38"/>
-         <ref-structure id="ENSISCU39"/>
-         <ref-structure id="ENSISCU40"/>
-         <ref-structure id="ENSISCU41"/>
-         <ref-structure id="ENSISCU42"/>
-         <ref-structure id="ENSISCU43"/>
-         <ref-structure id="ENSISCU44"/>
-         <ref-structure id="ENSISCU45"/>
-         <ref-structure id="ENSISCU46"/>
-      </structure>
-   </option>
-   <option id="CPSISCX7">
-      <nom>15 crédits à choisir parmi</nom>
-      <credits>15</credits>
-      <numero/>
-      <structure>
-         <ref-structure id="ENSISCU34"/>
-         <ref-structure id="ENSISCU35"/>
-         <ref-structure id="ENSISCU36"/>
-         <ref-structure id="ENSISCU29"/>
-         <ref-structure id="ENSISCU30"/>
-         <ref-structure id="ENSISCU31"/>
-         <ref-structure id="ENSISCU32"/>
-         <ref-structure id="ENSISCU40"/>
-         <ref-structure id="ENSISCU41"/>
-         <ref-structure id="ENSISCU42"/>
-         <ref-structure id="ENSISCU43"/>
-         <ref-structure id="ENSISCU44"/>
-         <ref-structure id="ENSISCU45"/>
-         <ref-structure id="ENSISCU46"/>
-      </structure>
-   </option>
-   <option id="CPSISCX8">
-      <nom>9 crédits à choisir parmi</nom>
-      <credits>9</credits>
-      <numero/>
-      <structure>
-         <ref-structure id="ENSISCU1"/>
-         <ref-structure id="ENSISCU4"/>
-         <ref-structure id="ENSISCU5"/>
-         <ref-structure id="ENSISCU6"/>
-         <ref-structure id="ENSISCU7"/>
-         <ref-structure id="ENSISCU8"/>
-         <ref-structure id="ENSISCU55"/>
-         <ref-structure id="ENSISCU3"/>
-         <ref-structure id="ENSISCU2"/>
-         <ref-structure id="ENSISCU33"/>
-         <ref-structure id="ENSISCU37"/>
-         <ref-structure id="ENSISCU21"/>
-         <ref-structure id="ENSISCU22"/>
-         <ref-structure id="ENSISCU23"/>
-         <ref-structure id="ENSISCU24"/>
-         <ref-structure id="ENSISCU25"/>
-         <ref-structure id="ENSISCU26"/>
-         <ref-structure id="ENSISCU27"/>
-         <ref-structure id="ENSISCU28"/>
-         <ref-structure id="ENSISCU38"/>
-         <ref-structure id="ENSISCU39"/>
-      </structure>
-   </option>
+   <semestres>
+      <semestre id="CPSINAST1">
+         <nom>Semestre S1</nom>
+         <credits>30</credits>
+         <numero>1</numero>
+         <structure>
+            <ref-structure id="ENSINAU1"/>
+            <ref-structure id="ENSINAU2"/>
+            <ref-structure id="ENSINAU3"/>
+            <ref-structure id="ENSINAU4"/>
+            <ref-structure id="ENSINAU5"/>
+            <ref-structure id="CPSINAX1"/>
+         </structure>
+      </semestre>
+      <semestre id="CPSINBST1">
+         <nom>Semestre S2</nom>
+         <credits>30</credits>
+         <numero>2</numero>
+         <structure>
+            <ref-structure id="ENSINBU1"/>
+            <ref-structure id="ENSINBU2"/>
+            <ref-structure id="ENSINBU3"/>
+            <ref-structure id="ENSINBU4"/>
+            <ref-structure id="ENSINBU5"/>
+            <ref-structure id="CPSINBX1"/>
+            <ref-structure id="CPSINBX2"/>
+         </structure>
+      </semestre>
+      <semestre id="CPSINCSA0">
+         <nom>Semestre S3 du M2 IF</nom>
+         <credits>30</credits>
+         <numero>3</numero>
+         <structure>
+            <ref-structure id="ENSINCU1"/>
+            <ref-structure id="ENSINCU2"/>
+            <ref-structure id="ENSINCU3"/>
+            <ref-structure id="CPSINCX1"/>
+         </structure>
+      </semestre>
+      <semestre id="CPSINCSC1">
+         <nom>Semestre S3 du parcours FSI</nom>
+         <credits>30</credits>
+         <numero>3</numero>
+         <structure>
+            <ref-structure id="CPSINCY1"/>
+            <ref-structure id="ENSINCU32"/>
+            <ref-structure id="ENSINCU33"/>
+            <ref-structure id="ENSINCU34"/>
+            <ref-structure id="ENSINCU35"/>
+            <ref-structure id="CPSINCY3"/>
+         </structure>
+      </semestre>
+      <semestre id="CPSINCSC2">
+         <nom>Semestre S3 du parcours ISL</nom>
+         <credits>30</credits>
+         <numero>3</numero>
+         <structure>
+            <ref-structure id="CPSINCY1"/>
+            <ref-structure id="ENSINCU36"/>
+            <ref-structure id="ENSINCU37"/>
+            <ref-structure id="ENSINCU38"/>
+            <ref-structure id="ENSINCU39"/>
+            <ref-structure id="ENSINCU40"/>
+            <ref-structure id="CPSINCY3"/>
+         </structure>
+      </semestre>
+      <semestre id="CPSINCSD0">
+         <nom>Semestre S3 du parcours GL</nom>
+         <credits>30</credits>
+         <numero>3</numero>
+         <structure>
+            <ref-structure id="ENSINCU41"/>
+            <ref-structure id="ENSINCU42"/>
+            <ref-structure id="ENSINCU43"/>
+            <ref-structure id="ENSINCU44"/>
+            <ref-structure id="ENSINCU45"/>
+            <ref-structure id="ENSINCU46"/>
+            <ref-structure id="ENSINCU47"/>
+            <ref-structure id="ENSINCU27"/>
+            <ref-structure id="ENSINCU28"/>
+         </structure>
+      </semestre>
+      <semestre id="CPSINCSE1">
+         <nom>Semestre S3 du parcours FED</nom>
+         <credits>30</credits>
+         <numero>3</numero>
+         <structure>
+            <ref-structure id="CPSINCY2"/>
+            <ref-structure id="ENSINCU51"/>
+            <ref-structure id="ENSINCU52"/>
+            <ref-structure id="CPSINCY3"/>
+         </structure>
+      </semestre>
+      <semestre id="CPSINCSE2">
+         <nom>Semestre S3 du parcours RO</nom>
+         <credits>30</credits>
+         <numero>3</numero>
+         <structure>
+            <ref-structure id="CPSINCY2"/>
+            <ref-structure id="ENSINCU53"/>
+            <ref-structure id="ENSINCU54"/>
+            <ref-structure id="ENSINCU55"/>
+            <ref-structure id="CPSINCY3"/>
+         </structure>
+      </semestre>
+      <semestre id="CPSINCSF0">
+         <nom>Semestre S3 du M2 RIM</nom>
+         <credits>30</credits>
+         <numero>3</numero>
+         <structure>
+            <ref-structure id="ENSINCU56"/>
+            <ref-structure id="ENSINCU57"/>
+            <ref-structure id="ENSINCU58"/>
+            <ref-structure id="ENSINCU59"/>
+            <ref-structure id="CPSINCX2"/>
+            <ref-structure id="ENSINCU66"/>
+            <ref-structure id="ENSINCU27"/>
+            <ref-structure id="ENSINCU28"/>
+            <ref-structure id="CPSINCY3"/>
+         </structure>
+      </semestre>
+      <semestre id="CPSINCSG0">
+         <nom>Semestre S3 du M2 SIR</nom>
+         <credits>30</credits>
+         <numero>3</numero>
+         <structure>
+            <ref-structure id="ENSINCU60"/>
+            <ref-structure id="ENSINCU61"/>
+            <ref-structure id="ENSINCU62"/>
+            <ref-structure id="ENSINCU63"/>
+            <ref-structure id="ENSINCU64"/>
+            <ref-structure id="ENSINCU65"/>
+            <ref-structure id="ENSINCU27"/>
+            <ref-structure id="ENSINCU28"/>
+         </structure>
+      </semestre>
+      <semestre id="CPSINDSA0">
+         <nom>Semestre S4 du M2 IF</nom>
+         <credits>30</credits>
+         <numero>4</numero>
+         <structure>
+            <ref-structure id="ENSINDU1"/>
+            <ref-structure id="ENSINDU2"/>
+         </structure>
+      </semestre>
+      <semestre id="CPSINDST1">
+         <nom>Semestre S4 des parcours à finalité professionnelle</nom>
+         <credits>30</credits>
+         <numero>4</numero>
+         <structure>
+            <ref-structure id="ENSINDU3"/>
+            <ref-structure id="ENSINDU4"/>
+         </structure>
+      </semestre>
+      <semestre id="CPSISCSC1">
+         <nom>Semestre S3 du M2 SIS parcours Informatique</nom>
+         <credits>30</credits>
+         <numero>3</numero>
+         <structure>
+            <ref-structure id="ENSISCU20"/>
+            <ref-structure id="CPSISCX3"/>
+            <ref-structure id="CPSISCX4"/>
+         </structure>
+      </semestre>
+      <semestre id="CPSISCSC2">
+         <nom>Semestre S3 du M2 SIS parcours Image</nom>
+         <credits>30</credits>
+         <numero>3</numero>
+         <structure>
+            <ref-structure id="ENSISCU20"/>
+            <ref-structure id="CPSISCX5"/>
+            <ref-structure id="CPSISCX6"/>
+         </structure>
+      </semestre>
+      <semestre id="CPSISCSC3">
+         <nom>Semestre S3 du M2 SIS parcours Systèmes</nom>
+         <credits>30</credits>
+         <numero>3</numero>
+         <structure>
+            <ref-structure id="ENSISCU20"/>
+            <ref-structure id="CPSISCX7"/>
+            <ref-structure id="CPSISCX8"/>
+         </structure>
+      </semestre>
+      <semestre id="CPSISDST2">
+         <nom>Semestre S4 du M2 SIS</nom>
+         <credits>30</credits>
+         <numero>4</numero>
+         <structure>
+            <ref-structure id="ENSISDU3"/>
+            <ref-structure id="ENSISDU4"/>
+         </structure>
+      </semestre>
+   </semestres>
+   <options>
+      <option id="CPSINAX1">
+         <nom>Option de 6 crédits à choisir</nom>
+         <credits>6</credits>
+         <numero/>
+         <structure>
+            <ref-structure id="ENSINAU6"/>
+            <ref-structure id="ENSINAU7"/>
+            <ref-structure id="ENSINAU8"/>
+            <ref-structure id="ENSINAU9"/>
+            <ref-structure id="ENSINAU10"/>
+            <ref-structure id="ENSINAU11"/>
+         </structure>
+      </option>
+      <option id="CPSINBX1">
+         <nom>Option de 6 crédits à choisir</nom>
+         <credits>6</credits>
+         <numero/>
+         <structure>
+            <ref-structure id="ENSINBU6"/>
+            <ref-structure id="ENSINBU7"/>
+         </structure>
+      </option>
+      <option id="CPSINBX2">
+         <nom>Option de 9 crédits à choisir</nom>
+         <credits>9</credits>
+         <numero/>
+         <structure>
+            <ref-structure id="ENSINBU8"/>
+            <ref-structure id="ENSINBU9"/>
+            <ref-structure id="ENSINBU10"/>
+            <ref-structure id="ENSINBU11"/>
+            <ref-structure id="ENSINBU12"/>
+            <ref-structure id="ENSINBU13"/>
+            <ref-structure id="ENSINBU14"/>
+         </structure>
+      </option>
+      <option id="CPSINCX1">
+         <nom>15 crédits à choisir (validation requise)</nom>
+         <credits>15</credits>
+         <numero/>
+         <structure>
+            <ref-structure id="ENSINCU4"/>
+            <ref-structure id="ENSINCU5"/>
+            <ref-structure id="ENSINCU6"/>
+            <ref-structure id="ENSINCU7"/>
+            <ref-structure id="ENSINCU8"/>
+            <ref-structure id="ENSINCU9"/>
+            <ref-structure id="ENSINCU10"/>
+            <ref-structure id="ENSINCU11"/>
+            <ref-structure id="ENSINCU12"/>
+            <ref-structure id="ENSINCU13"/>
+            <ref-structure id="ENSINCU14"/>
+            <ref-structure id="ENSINCU15"/>
+            <ref-structure id="ENSINCU16"/>
+            <ref-structure id="ENSINCU17"/>
+            <ref-structure id="ENSINCU18"/>
+            <ref-structure id="ENSINCU19"/>
+            <ref-structure id="ENSINCU20"/>
+            <ref-structure id="ENSINCU21"/>
+            <ref-structure id="ENSINCU22"/>
+            <ref-structure id="ENSINCU23"/>
+            <ref-structure id="ENSINCU24"/>
+            <ref-structure id="ENSINCU25"/>
+            <ref-structure id="ENSINCU26"/>
+         </structure>
+      </option>
+      <option id="CPSINCX2">
+         <nom>3 crédits à choisir parmi</nom>
+         <credits>3</credits>
+         <numero/>
+         <structure>
+            <ref-structure id="ENSINCU4"/>
+            <ref-structure id="ENSINCU5"/>
+            <ref-structure id="ENSINCU6"/>
+            <ref-structure id="ENSINCU7"/>
+            <ref-structure id="ENSINCU19"/>
+            <ref-structure id="ENSINCU20"/>
+            <ref-structure id="ENSINCU21"/>
+         </structure>
+      </option>
+      <option id="CPSISCX3">
+         <nom>15 crédits à choisir parmi</nom>
+         <credits>15</credits>
+         <numero/>
+         <structure>
+            <ref-structure id="ENSISCU21"/>
+            <ref-structure id="ENSISCU22"/>
+            <ref-structure id="ENSISCU23"/>
+            <ref-structure id="ENSISCU24"/>
+            <ref-structure id="ENSISCU25"/>
+            <ref-structure id="ENSISCU26"/>
+            <ref-structure id="ENSISCU27"/>
+            <ref-structure id="ENSISCU28"/>
+            <ref-structure id="ENSISCU29"/>
+            <ref-structure id="ENSISCU30"/>
+            <ref-structure id="ENSISCU31"/>
+            <ref-structure id="ENSISCU32"/>
+         </structure>
+      </option>
+      <option id="CPSISCX4">
+         <nom>9 crédits à choisir parmi</nom>
+         <credits>9</credits>
+         <numero/>
+         <structure>
+            <ref-structure id="ENSISCU1"/>
+            <ref-structure id="ENSISCU4"/>
+            <ref-structure id="ENSISCU5"/>
+            <ref-structure id="ENSISCU6"/>
+            <ref-structure id="ENSISCU7"/>
+            <ref-structure id="ENSISCU8"/>
+            <ref-structure id="ENSISCU55"/>
+            <ref-structure id="ENSISCU3"/>
+            <ref-structure id="ENSISCU2"/>
+            <ref-structure id="ENSISCU33"/>
+            <ref-structure id="ENSISCU34"/>
+            <ref-structure id="ENSISCU35"/>
+            <ref-structure id="ENSISCU36"/>
+            <ref-structure id="ENSISCU37"/>
+            <ref-structure id="ENSISCU38"/>
+            <ref-structure id="ENSISCU39"/>
+            <ref-structure id="ENSISCU40"/>
+            <ref-structure id="ENSISCU41"/>
+            <ref-structure id="ENSISCU42"/>
+            <ref-structure id="ENSISCU43"/>
+            <ref-structure id="ENSISCU44"/>
+            <ref-structure id="ENSISCU45"/>
+            <ref-structure id="ENSISCU46"/>
+         </structure>
+      </option>
+      <option id="CPSISCX5">
+         <nom>15 crédits à choisir parmi</nom>
+         <credits>15</credits>
+         <numero/>
+         <structure>
+            <ref-structure id="ENSISCU1"/>
+            <ref-structure id="ENSISCU4"/>
+            <ref-structure id="ENSISCU5"/>
+            <ref-structure id="ENSISCU6"/>
+            <ref-structure id="ENSISCU7"/>
+            <ref-structure id="ENSISCU8"/>
+            <ref-structure id="ENSISCU55"/>
+            <ref-structure id="ENSISCU3"/>
+            <ref-structure id="ENSISCU2"/>
+            <ref-structure id="ENSISCU29"/>
+         </structure>
+      </option>
+      <option id="CPSISCX6">
+         <nom>9 crédits à choisir parmi</nom>
+         <credits>9</credits>
+         <numero/>
+         <structure>
+            <ref-structure id="ENSISCU33"/>
+            <ref-structure id="ENSISCU34"/>
+            <ref-structure id="ENSISCU35"/>
+            <ref-structure id="ENSISCU36"/>
+            <ref-structure id="ENSISCU37"/>
+            <ref-structure id="ENSISCU21"/>
+            <ref-structure id="ENSISCU22"/>
+            <ref-structure id="ENSISCU23"/>
+            <ref-structure id="ENSISCU24"/>
+            <ref-structure id="ENSISCU25"/>
+            <ref-structure id="ENSISCU26"/>
+            <ref-structure id="ENSISCU27"/>
+            <ref-structure id="ENSISCU28"/>
+            <ref-structure id="ENSISCU30"/>
+            <ref-structure id="ENSISCU31"/>
+            <ref-structure id="ENSISCU32"/>
+            <ref-structure id="ENSISCU38"/>
+            <ref-structure id="ENSISCU39"/>
+            <ref-structure id="ENSISCU40"/>
+            <ref-structure id="ENSISCU41"/>
+            <ref-structure id="ENSISCU42"/>
+            <ref-structure id="ENSISCU43"/>
+            <ref-structure id="ENSISCU44"/>
+            <ref-structure id="ENSISCU45"/>
+            <ref-structure id="ENSISCU46"/>
+         </structure>
+      </option>
+      <option id="CPSISCX7">
+         <nom>15 crédits à choisir parmi</nom>
+         <credits>15</credits>
+         <numero/>
+         <structure>
+            <ref-structure id="ENSISCU34"/>
+            <ref-structure id="ENSISCU35"/>
+            <ref-structure id="ENSISCU36"/>
+            <ref-structure id="ENSISCU29"/>
+            <ref-structure id="ENSISCU30"/>
+            <ref-structure id="ENSISCU31"/>
+            <ref-structure id="ENSISCU32"/>
+            <ref-structure id="ENSISCU40"/>
+            <ref-structure id="ENSISCU41"/>
+            <ref-structure id="ENSISCU42"/>
+            <ref-structure id="ENSISCU43"/>
+            <ref-structure id="ENSISCU44"/>
+            <ref-structure id="ENSISCU45"/>
+            <ref-structure id="ENSISCU46"/>
+         </structure>
+      </option>
+      <option id="CPSISCX8">
+         <nom>9 crédits à choisir parmi</nom>
+         <credits>9</credits>
+         <numero/>
+         <structure>
+            <ref-structure id="ENSISCU1"/>
+            <ref-structure id="ENSISCU4"/>
+            <ref-structure id="ENSISCU5"/>
+            <ref-structure id="ENSISCU6"/>
+            <ref-structure id="ENSISCU7"/>
+            <ref-structure id="ENSISCU8"/>
+            <ref-structure id="ENSISCU55"/>
+            <ref-structure id="ENSISCU3"/>
+            <ref-structure id="ENSISCU2"/>
+            <ref-structure id="ENSISCU33"/>
+            <ref-structure id="ENSISCU37"/>
+            <ref-structure id="ENSISCU21"/>
+            <ref-structure id="ENSISCU22"/>
+            <ref-structure id="ENSISCU23"/>
+            <ref-structure id="ENSISCU24"/>
+            <ref-structure id="ENSISCU25"/>
+            <ref-structure id="ENSISCU26"/>
+            <ref-structure id="ENSISCU27"/>
+            <ref-structure id="ENSISCU28"/>
+            <ref-structure id="ENSISCU38"/>
+            <ref-structure id="ENSISCU39"/>
+         </structure>
+      </option>
+   </options>
+   <groupes>
+      <groupe id="CPSINCY1">
+         <nom>TC des parcours FSI et ISL</nom>
+         <credits>15</credits>
+         <numero/>
+         <structure>
+            <ref-structure id="ENSINCU27"/>
+            <ref-structure id="ENSINCU28"/>
+            <ref-structure id="ENSINCU29"/>
+            <ref-structure id="ENSINCU30"/>
+            <ref-structure id="ENSINCU31"/>
+         </structure>
+      </groupe>
+      <groupe id="CPSINCY2">
+         <nom>Tronc-commun des parcours FED et RO</nom>
+         <credits>21</credits>
+         <numero/>
+         <structure>
+            <ref-structure id="ENSINCU27"/>
+            <ref-structure id="ENSINCU28"/>
+            <ref-structure id="ENSINCU30"/>
+            <ref-structure id="ENSINCU40"/>
+            <ref-structure id="ENSINCU48"/>
+            <ref-structure id="ENSINCU49"/>
+            <ref-structure id="ENSINCU50"/>
+         </structure>
+      </groupe>
+      <groupe id="CPSINCY3">
+         <nom>Unité d'enseignement à bonus</nom>
+         <credits>0</credits>
+         <numero/>
+         <structure>
+            <ref-structure id="ENSINCU67"/>
+         </structure>
+      </groupe>
+   </groupes>
    <specialites>
-      <specialite>
-         <ref-intervenant ref="IN12316"/>
-         <nom>Sciences de l'information et des systèmes</nom>
+      <specialite id="SPSIN5B">
+         <responsables>
+            <ref-intervenant ref="IN12316"/>
+         </responsables>
+         <nom>
+                     M2 Sciences de l'information et des systèmes</nom>
          <description/>
-         <parcours>
-            <ref-intervenant ref="IN12632"/>
-            <nom>M2 Spécialité Sciences de l'information et des systèmes, parcours Informatique</nom>
+         <parcours id="PRSIN5B1">
+            <responsables>
+               <ref-intervenant ref="IN12632"/>
+            </responsables>
+            <nom>Informatique</nom>
             <description/>
             <debouches/>
             <lieux/>
-            <semestres>
+            <ref-semestres>
                <ref-semestre id="CPSISCSC1"/>
                <ref-semestre id="CPSISDST2"/>
-            </semestres>
+            </ref-semestres>
          </parcours>
-         <parcours>
-            <ref-intervenant ref="IN8006"/>
-            <nom>M2 Spécialité Sciences de l'information et des systèmes, parcours Image</nom>
+         <parcours id="PRSIN5B2">
+            <responsables>
+               <ref-intervenant ref="IN8006"/>
+            </responsables>
+            <nom>Image</nom>
             <description/>
             <debouches/>
             <lieux/>
-            <semestres>
+            <ref-semestres>
                <ref-semestre id="CPSISCSC2"/>
                <ref-semestre id="CPSISDST2"/>
-            </semestres>
+            </ref-semestres>
          </parcours>
-         <parcours>
-            <ref-intervenant ref="IN12834"/>
-            <nom>M2 Spécialité Sciences de l'information et des systèmes, parcours Systèmes</nom>
+         <parcours id="PRSIN5B3">
+            <responsables>
+               <ref-intervenant ref="IN12834"/>
+            </responsables>
+            <nom>Systèmes</nom>
             <description/>
             <debouches/>
             <lieux/>
-            <semestres>
+            <ref-semestres>
                <ref-semestre id="CPSISCSC3"/>
                <ref-semestre id="CPSISDST2"/>
-            </semestres>
+            </ref-semestres>
          </parcours>
       </specialite>
-      <specialite>
-         <ref-intervenant ref="IN3524"/>
-         <ref-intervenant ref="IN18"/>
-         <nom>Fiabilité, sécurité et intégration logicielle (FSIL)</nom>
-         <description/>
-         <parcours>
+      <specialite id="SPSIN5C">
+         <responsables>
             <ref-intervenant ref="IN3524"/>
-            <nom>M2 Spécialité Fiabilité, sécurité et intégration logicielle (FSIL), parcours Fiabilité et sécurité informatique (FSI)</nom>
+            <ref-intervenant ref="IN18"/>
+         </responsables>
+         <nom>
+                     M2 Fiabilité, sécurité et intégration logicielle (FSIL)</nom>
+         <description/>
+         <parcours id="PRSIN5C1">
+            <responsables>
+               <ref-intervenant ref="IN3524"/>
+            </responsables>
+            <nom>Fiabilité et sécurité informatique (FSI)</nom>
             <description/>
             <debouches/>
             <lieux/>
-            <semestres>
+            <ref-semestres>
                <ref-semestre id="CPSINCSC1"/>
                <ref-semestre id="CPSINDST1"/>
-            </semestres>
+            </ref-semestres>
          </parcours>
-         <parcours>
-            <ref-intervenant ref="IN18"/>
-            <nom>M2 Spécialité Fiabilité, sécurité et intégration logicielle (FSIL), parcours Intégration de systèmes logiciels (ISL)</nom>
+         <parcours id="PRSIN5C2">
+            <responsables>
+               <ref-intervenant ref="IN18"/>
+            </responsables>
+            <nom>Intégration de systèmes logiciels (ISL)</nom>
             <description/>
             <debouches/>
             <lieux/>
-            <semestres>
+            <ref-semestres>
                <ref-semestre id="CPSINCSC2"/>
                <ref-semestre id="CPSINDST1"/>
-            </semestres>
+            </ref-semestres>
          </parcours>
       </specialite>
-      <specialite>
-         <ref-intervenant ref="IN7722"/>
-         <nom>Informatique décisionnelle (ID)</nom>
-         <description/>
-         <parcours>
+      <specialite id="SPSIN5E">
+         <responsables>
             <ref-intervenant ref="IN7722"/>
-            <nom>M2 Spécialité Informatique décisionnelle (ID), parcours Fouille et entrepôts de données (FED)</nom>
+         </responsables>
+         <nom>
+                     M2 Informatique décisionnelle (ID)</nom>
+         <description/>
+         <parcours id="PRSIN5E1">
+            <responsables>
+               <ref-intervenant ref="IN7722"/>
+            </responsables>
+            <nom>Fouille et entrepôts de données (FED)</nom>
             <description/>
             <debouches/>
             <lieux/>
-            <semestres>
+            <ref-semestres>
                <ref-semestre id="CPSINCSE1"/>
                <ref-semestre id="CPSINDST1"/>
-            </semestres>
+            </ref-semestres>
          </parcours>
-         <parcours>
-            <ref-intervenant ref="IN8086"/>
-            <nom>M2 Spécialité Informatique décisionnelle (ID), parcours Recherche opérationnelle (RO)</nom>
+         <parcours id="PRSIN5E2">
+            <responsables>
+               <ref-intervenant ref="IN8086"/>
+            </responsables>
+            <nom>Recherche opérationnelle (RO)</nom>
             <description/>
             <debouches/>
             <lieux/>
-            <semestres>
+            <ref-semestres>
                <ref-semestre id="CPSINCSE2"/>
                <ref-semestre id="CPSINDST1"/>
-            </semestres>
+            </ref-semestres>
+         </parcours>
+      </specialite>
+      <specialite id="SPRSIN4T0">
+         <parcours id="PRSIN4T0">
+            <responsables>
+               <ref-intervenant ref="IN9224"/>
+            </responsables>
+            <nom>M1 Informatique</nom>
+            <description/>
+            <debouches/>
+            <lieux/>
+            <ref-semestres>
+               <ref-semestre id="CPSINAST1"/>
+               <ref-semestre id="CPSINBST1"/>
+            </ref-semestres>
+         </parcours>
+      </specialite>
+      <specialite id="SPRSIN5A0">
+         <parcours id="PRSIN5A0">
+            <responsables/>
+            <nom>M2 Spécialité Informatique fondamentale (IF)</nom>
+            <description/>
+            <debouches/>
+            <lieux/>
+            <ref-semestres>
+               <ref-semestre id="CPSINCSA0"/>
+               <ref-semestre id="CPSINDSA0"/>
+            </ref-semestres>
+         </parcours>
+      </specialite>
+      <specialite id="SPRSIN5D0">
+         <parcours id="PRSIN5D0">
+            <responsables/>
+            <nom>M2 Spécialité Génie logiciel (GL)</nom>
+            <description/>
+            <debouches/>
+            <lieux/>
+            <ref-semestres>
+               <ref-semestre id="CPSINCSD0"/>
+               <ref-semestre id="CPSINDST1"/>
+            </ref-semestres>
+         </parcours>
+      </specialite>
+      <specialite id="SPRSIN5F0">
+         <parcours id="PRSIN5F0">
+            <responsables/>
+            <nom>M2 Spécialité Recherche d'informations multimédia (RIM)</nom>
+            <description/>
+            <debouches/>
+            <lieux/>
+            <ref-semestres>
+               <ref-semestre id="CPSINCSF0"/>
+               <ref-semestre id="CPSINDST1"/>
+            </ref-semestres>
+         </parcours>
+      </specialite>
+      <specialite id="SPRSIN5G0">
+         <parcours id="PRSIN5G0">
+            <responsables/>
+            <nom>M2 Spécialité Systèmes d'information répartis (SIR)</nom>
+            <description/>
+            <debouches/>
+            <lieux/>
+            <ref-semestres>
+               <ref-semestre id="CPSINCSG0"/>
+               <ref-semestre id="CPSINDST1"/>
+            </ref-semestres>
          </parcours>
       </specialite>
    </specialites>
