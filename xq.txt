@@ -1,0 +1,18 @@
+<html><head/><body>
+{
+for $i in doc("new-data.xml")//intervenant
+return 
+  <div>
+    <h1>{data($i/nom)}</h1>
+    <h2>Enseignements</h2>
+    <ul>
+    {
+      for $j in doc("new-data.xml")//unite
+      where $j/ref-intervenant/@ref = $i/@id
+      return <li>{data($j/nom)}</li>
+    }
+    </ul>
+  </div>
+}
+</body>
+</html>
