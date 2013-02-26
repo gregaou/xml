@@ -1,7 +1,10 @@
-@import url(http://fonts.googleapis.com/css?family=Oswald);
+@font-face {
+    font-family: Oswald;
+    src: url(../fonts/Oswald-Regular.ttf);
+}
 
 body {
-   background-image: url(http://www.colourlovers.com/patternPreview/308306/F1F1F1/E8E8E8/0080C0/FFFFFF/E7E7E7.png);
+   background-image: url(../img/bg.png);
 }
 
 .nav,
