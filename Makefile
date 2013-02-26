@@ -1,9 +1,11 @@
-DTD			= master.dtd
-XML			= master.xml
+DTD			= new-data.dtd
+XML			= new-data.xml
 SCHEMA	= 
-HTML    = www/index.html
-XSL			= master.xsl
+WWW 		= www/
+HTML 		= index.html
+XSL			= new-data.xsl
 JAVA 		= ue.java
+WEB 		= *.html
 
 all: dtd xsd web tidy xq java
 	
@@ -14,9 +16,8 @@ dtd:
 xsd:
 	xmllint --valid --noout --schema $(SCHEMA) $(XML)
 
-web:
-	rm $(HTML)
-	xsltproc $(XSL) $(XML) > $(HTML)
+web: clean_web
+	cd $(WWW) && xsltproc ../$(XSL) ../$(XML) > $(HTML)
 
 tidy:
 	tidy -utf8 -im $(HTML)
@@ -27,3 +28,5 @@ xq:
 java:
 	javac $(JAVA)
 
+clean_web:
+	([ -f $(WWW)$(HTML) ] && rm $(WWW)$(WEB)) || echo "Rien à supprimer"
