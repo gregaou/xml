@@ -4,6 +4,7 @@
 <!ENTITY stjerome  "St Jérôme" >
 
 <!ENTITY % id_required "id  ID  #REQUIRED">
+<!ENTITY % ref         "ref IDREF #REQUIRED">
 
 <!ENTITY % liste       "(item*)" >
 <!ENTITY % liste_nv    "(item+)">
@@ -41,7 +42,7 @@
 
 <!ELEMENT ref-semestres (ref-semestre,ref-semestre) >
 <!ELEMENT ref-semestre EMPTY      >
-<!ATTLIST ref-semestre id IDREF #REQUIRED>
+<!ATTLIST ref-semestre %ref;>
 <!-- Fin parcours -->
 
 
@@ -64,7 +65,7 @@
 <!ELEMENT numero (#PCDATA) >
 <!ELEMENT structure (ref-structure)+  >
 <!ELEMENT ref-structure EMPTY      >
-<!ATTLIST ref-structure id IDREF #REQUIRED>
+<!ATTLIST ref-structure %ref;>
 <!-- Fin semestres  -->
 
 
@@ -88,12 +89,12 @@
 <!ELEMENT credits         (#PCDATA)  >
 <!ELEMENT resume          %miseenformebloc;  >
 <!ELEMENT ref-intervenant EMPTY      >
-<!ATTLIST ref-intervenant ref IDREF #REQUIRED>
+<!ATTLIST ref-intervenant %ref;>
 <!-- Fin unite -->
 
 <!-- Début ref-unite -->
 <!ELEMENT ref-unite EMPTY>
-<!ATTLIST ref-unite ref IDREF #REQUIRED>
+<!ATTLIST ref-unite %ref;>
 <!-- Fin ref-unite -->
 
 <!-- Début intervenants -->

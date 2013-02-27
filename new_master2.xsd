@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="master">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="intervenants"/>
+        <xs:element ref="unites"/>
+        <xs:element ref="semestres"/>
+        <xs:element ref="options"/>
+        <xs:element ref="groupes"/>
+        <xs:element ref="specialites"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="intervenants">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="intervenant"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="intervenant">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="nom"/>
+        <xs:element ref="prenom"/>
+        <xs:element ref="email"/>
+        <xs:element ref="siteweb"/>
+      </xs:sequence>
+      <xs:attribute name="id" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="prenom" type="xs:string"/>
+  <xs:element name="email" type="xs:string"/>
+  <xs:element name="siteweb">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="unites">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="unite"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="unite">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="nom"/>
+        <xs:element ref="credits"/>
+        <xs:element ref="resume"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="ref-intervenant"/>
+      </xs:sequence>
+      <xs:attribute name="id" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="resume">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="p"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="p" type="xs:string"/>
+  <xs:element name="semestres">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="semestre"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="semestre">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="nom"/>
+        <xs:element ref="credits"/>
+        <xs:element ref="numero"/>
+        <xs:element ref="structure"/>
+      </xs:sequence>
+      <xs:attribute name="id" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="options">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="option"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="option">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="nom"/>
+        <xs:element ref="credits"/>
+        <xs:element ref="numero"/>
+        <xs:element ref="structure"/>
+      </xs:sequence>
+      <xs:attribute name="id" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="groupes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="groupe"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="groupe">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="nom"/>
+        <xs:element ref="credits"/>
+        <xs:element ref="numero"/>
+        <xs:element ref="structure"/>
+      </xs:sequence>
+      <xs:attribute name="id" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="specialites">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="specialite"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="specialite">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:sequence minOccurs="0">
+          <xs:element ref="responsables"/>
+          <xs:element ref="nom"/>
+          <xs:element ref="description"/>
+        </xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="parcours"/>
+      </xs:sequence>
+      <xs:attribute name="id" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="parcours">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="responsables"/>
+        <xs:element ref="nom"/>
+        <xs:element ref="description"/>
+        <xs:element ref="debouches"/>
+        <xs:element ref="lieux"/>
+        <xs:element ref="ref-semestres"/>
+      </xs:sequence>
+      <xs:attribute name="id" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="debouches">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="lieux">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="ref-semestres">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="ref-semestre"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ref-semestre">
+    <xs:complexType>
+      <xs:attribute name="id" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nom" type="xs:string"/>
+  <xs:element name="credits" type="xs:integer"/>
+  <xs:element name="ref-intervenant">
+    <xs:complexType>
+      <xs:attribute name="ref" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="numero" type="xs:string"/>
+  <xs:element name="structure">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="ref-structure"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ref-structure">
+    <xs:complexType>
+      <xs:attribute name="id" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="responsables">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="ref-intervenant"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="description">
+    <xs:complexType/>
+  </xs:element>
+</xs:schema>

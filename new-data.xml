@@ -1417,12 +1417,12 @@
          <credits>30</credits>
          <numero>1</numero>
          <structure>
-            <ref-structure id="ENSINAU1"/>
-            <ref-structure id="ENSINAU2"/>
-            <ref-structure id="ENSINAU3"/>
-            <ref-structure id="ENSINAU4"/>
-            <ref-structure id="ENSINAU5"/>
-            <ref-structure id="CPSINAX1"/>
+            <ref-structure ref="ENSINAU1"/>
+            <ref-structure ref="ENSINAU2"/>
+            <ref-structure ref="ENSINAU3"/>
+            <ref-structure ref="ENSINAU4"/>
+            <ref-structure ref="ENSINAU5"/>
+            <ref-structure ref="CPSINAX1"/>
          </structure>
       </semestre>
       <semestre id="CPSINBST1">
@@ -1430,13 +1430,13 @@
          <credits>30</credits>
          <numero>2</numero>
          <structure>
-            <ref-structure id="ENSINBU1"/>
-            <ref-structure id="ENSINBU2"/>
-            <ref-structure id="ENSINBU3"/>
-            <ref-structure id="ENSINBU4"/>
-            <ref-structure id="ENSINBU5"/>
-            <ref-structure id="CPSINBX1"/>
-            <ref-structure id="CPSINBX2"/>
+            <ref-structure ref="ENSINBU1"/>
+            <ref-structure ref="ENSINBU2"/>
+            <ref-structure ref="ENSINBU3"/>
+            <ref-structure ref="ENSINBU4"/>
+            <ref-structure ref="ENSINBU5"/>
+            <ref-structure ref="CPSINBX1"/>
+            <ref-structure ref="CPSINBX2"/>
          </structure>
       </semestre>
       <semestre id="CPSINCSA0">
@@ -1444,10 +1444,10 @@
          <credits>30</credits>
          <numero>3</numero>
          <structure>
-            <ref-structure id="ENSINCU1"/>
-            <ref-structure id="ENSINCU2"/>
-            <ref-structure id="ENSINCU3"/>
-            <ref-structure id="CPSINCX1"/>
+            <ref-structure ref="ENSINCU1"/>
+            <ref-structure ref="ENSINCU2"/>
+            <ref-structure ref="ENSINCU3"/>
+            <ref-structure ref="CPSINCX1"/>
          </structure>
       </semestre>
       <semestre id="CPSINCSC1">
@@ -1455,12 +1455,12 @@
          <credits>30</credits>
          <numero>3</numero>
          <structure>
-            <ref-structure id="CPSINCY1"/>
-            <ref-structure id="ENSINCU32"/>
-            <ref-structure id="ENSINCU33"/>
-            <ref-structure id="ENSINCU34"/>
-            <ref-structure id="ENSINCU35"/>
-            <ref-structure id="CPSINCY3"/>
+            <ref-structure ref="CPSINCY1"/>
+            <ref-structure ref="ENSINCU32"/>
+            <ref-structure ref="ENSINCU33"/>
+            <ref-structure ref="ENSINCU34"/>
+            <ref-structure ref="ENSINCU35"/>
+            <ref-structure ref="CPSINCY3"/>
          </structure>
       </semestre>
       <semestre id="CPSINCSC2">
@@ -1468,13 +1468,13 @@
          <credits>30</credits>
          <numero>3</numero>
          <structure>
-            <ref-structure id="CPSINCY1"/>
-            <ref-structure id="ENSINCU36"/>
-            <ref-structure id="ENSINCU37"/>
-            <ref-structure id="ENSINCU38"/>
-            <ref-structure id="ENSINCU39"/>
-            <ref-structure id="ENSINCU40"/>
-            <ref-structure id="CPSINCY3"/>
+            <ref-structure ref="CPSINCY1"/>
+            <ref-structure ref="ENSINCU36"/>
+            <ref-structure ref="ENSINCU37"/>
+            <ref-structure ref="ENSINCU38"/>
+            <ref-structure ref="ENSINCU39"/>
+            <ref-structure ref="ENSINCU40"/>
+            <ref-structure ref="CPSINCY3"/>
          </structure>
       </semestre>
       <semestre id="CPSINCSD0">
@@ -1482,15 +1482,15 @@
          <credits>30</credits>
          <numero>3</numero>
          <structure>
-            <ref-structure id="ENSINCU41"/>
-            <ref-structure id="ENSINCU42"/>
-            <ref-structure id="ENSINCU43"/>
-            <ref-structure id="ENSINCU44"/>
-            <ref-structure id="ENSINCU45"/>
-            <ref-structure id="ENSINCU46"/>
-            <ref-structure id="ENSINCU47"/>
-            <ref-structure id="ENSINCU27"/>
-            <ref-structure id="ENSINCU28"/>
+            <ref-structure ref="ENSINCU41"/>
+            <ref-structure ref="ENSINCU42"/>
+            <ref-structure ref="ENSINCU43"/>
+            <ref-structure ref="ENSINCU44"/>
+            <ref-structure ref="ENSINCU45"/>
+            <ref-structure ref="ENSINCU46"/>
+            <ref-structure ref="ENSINCU47"/>
+            <ref-structure ref="ENSINCU27"/>
+            <ref-structure ref="ENSINCU28"/>
          </structure>
       </semestre>
       <semestre id="CPSINCSE1">
@@ -1498,10 +1498,10 @@
          <credits>30</credits>
          <numero>3</numero>
          <structure>
-            <ref-structure id="CPSINCY2"/>
-            <ref-structure id="ENSINCU51"/>
-            <ref-structure id="ENSINCU52"/>
-            <ref-structure id="CPSINCY3"/>
+            <ref-structure ref="CPSINCY2"/>
+            <ref-structure ref="ENSINCU51"/>
+            <ref-structure ref="ENSINCU52"/>
+            <ref-structure ref="CPSINCY3"/>
          </structure>
       </semestre>
       <semestre id="CPSINCSE2">
@@ -1509,11 +1509,11 @@
          <credits>30</credits>
          <numero>3</numero>
          <structure>
-            <ref-structure id="CPSINCY2"/>
-            <ref-structure id="ENSINCU53"/>
-            <ref-structure id="ENSINCU54"/>
-            <ref-structure id="ENSINCU55"/>
-            <ref-structure id="CPSINCY3"/>
+            <ref-structure ref="CPSINCY2"/>
+            <ref-structure ref="ENSINCU53"/>
+            <ref-structure ref="ENSINCU54"/>
+            <ref-structure ref="ENSINCU55"/>
+            <ref-structure ref="CPSINCY3"/>
          </structure>
       </semestre>
       <semestre id="CPSINCSF0">
@@ -1521,15 +1521,15 @@
          <credits>30</credits>
          <numero>3</numero>
          <structure>
-            <ref-structure id="ENSINCU56"/>
-            <ref-structure id="ENSINCU57"/>
-            <ref-structure id="ENSINCU58"/>
-            <ref-structure id="ENSINCU59"/>
-            <ref-structure id="CPSINCX2"/>
-            <ref-structure id="ENSINCU66"/>
-            <ref-structure id="ENSINCU27"/>
-            <ref-structure id="ENSINCU28"/>
-            <ref-structure id="CPSINCY3"/>
+            <ref-structure ref="ENSINCU56"/>
+            <ref-structure ref="ENSINCU57"/>
+            <ref-structure ref="ENSINCU58"/>
+            <ref-structure ref="ENSINCU59"/>
+            <ref-structure ref="CPSINCX2"/>
+            <ref-structure ref="ENSINCU66"/>
+            <ref-structure ref="ENSINCU27"/>
+            <ref-structure ref="ENSINCU28"/>
+            <ref-structure ref="CPSINCY3"/>
          </structure>
       </semestre>
       <semestre id="CPSINCSG0">
@@ -1537,14 +1537,14 @@
          <credits>30</credits>
          <numero>3</numero>
          <structure>
-            <ref-structure id="ENSINCU60"/>
-            <ref-structure id="ENSINCU61"/>
-            <ref-structure id="ENSINCU62"/>
-            <ref-structure id="ENSINCU63"/>
-            <ref-structure id="ENSINCU64"/>
-            <ref-structure id="ENSINCU65"/>
-            <ref-structure id="ENSINCU27"/>
-            <ref-structure id="ENSINCU28"/>
+            <ref-structure ref="ENSINCU60"/>
+            <ref-structure ref="ENSINCU61"/>
+            <ref-structure ref="ENSINCU62"/>
+            <ref-structure ref="ENSINCU63"/>
+            <ref-structure ref="ENSINCU64"/>
+            <ref-structure ref="ENSINCU65"/>
+            <ref-structure ref="ENSINCU27"/>
+            <ref-structure ref="ENSINCU28"/>
          </structure>
       </semestre>
       <semestre id="CPSINDSA0">
@@ -1552,8 +1552,8 @@
          <credits>30</credits>
          <numero>4</numero>
          <structure>
-            <ref-structure id="ENSINDU1"/>
-            <ref-structure id="ENSINDU2"/>
+            <ref-structure ref="ENSINDU1"/>
+            <ref-structure ref="ENSINDU2"/>
          </structure>
       </semestre>
       <semestre id="CPSINDST1">
@@ -1561,8 +1561,8 @@
          <credits>30</credits>
          <numero>4</numero>
          <structure>
-            <ref-structure id="ENSINDU3"/>
-            <ref-structure id="ENSINDU4"/>
+            <ref-structure ref="ENSINDU3"/>
+            <ref-structure ref="ENSINDU4"/>
          </structure>
       </semestre>
       <semestre id="CPSISCSC1">
@@ -1570,9 +1570,9 @@
          <credits>30</credits>
          <numero>3</numero>
          <structure>
-            <ref-structure id="ENSISCU20"/>
-            <ref-structure id="CPSISCX3"/>
-            <ref-structure id="CPSISCX4"/>
+            <ref-structure ref="ENSISCU20"/>
+            <ref-structure ref="CPSISCX3"/>
+            <ref-structure ref="CPSISCX4"/>
          </structure>
       </semestre>
       <semestre id="CPSISCSC2">
@@ -1580,9 +1580,9 @@
          <credits>30</credits>
          <numero>3</numero>
          <structure>
-            <ref-structure id="ENSISCU20"/>
-            <ref-structure id="CPSISCX5"/>
-            <ref-structure id="CPSISCX6"/>
+            <ref-structure ref="ENSISCU20"/>
+            <ref-structure ref="CPSISCX5"/>
+            <ref-structure ref="CPSISCX6"/>
          </structure>
       </semestre>
       <semestre id="CPSISCSC3">
@@ -1590,9 +1590,9 @@
          <credits>30</credits>
          <numero>3</numero>
          <structure>
-            <ref-structure id="ENSISCU20"/>
-            <ref-structure id="CPSISCX7"/>
-            <ref-structure id="CPSISCX8"/>
+            <ref-structure ref="ENSISCU20"/>
+            <ref-structure ref="CPSISCX7"/>
+            <ref-structure ref="CPSISCX8"/>
          </structure>
       </semestre>
       <semestre id="CPSISDST2">
@@ -1600,8 +1600,8 @@
          <credits>30</credits>
          <numero>4</numero>
          <structure>
-            <ref-structure id="ENSISDU3"/>
-            <ref-structure id="ENSISDU4"/>
+            <ref-structure ref="ENSISDU3"/>
+            <ref-structure ref="ENSISDU4"/>
          </structure>
       </semestre>
    </semestres>
@@ -1611,12 +1611,12 @@
          <credits>6</credits>
          <numero/>
          <structure>
-            <ref-structure id="ENSINAU6"/>
-            <ref-structure id="ENSINAU7"/>
-            <ref-structure id="ENSINAU8"/>
-            <ref-structure id="ENSINAU9"/>
-            <ref-structure id="ENSINAU10"/>
-            <ref-structure id="ENSINAU11"/>
+            <ref-structure ref="ENSINAU6"/>
+            <ref-structure ref="ENSINAU7"/>
+            <ref-structure ref="ENSINAU8"/>
+            <ref-structure ref="ENSINAU9"/>
+            <ref-structure ref="ENSINAU10"/>
+            <ref-structure ref="ENSINAU11"/>
          </structure>
       </option>
       <option id="CPSINBX1">
@@ -1624,8 +1624,8 @@
          <credits>6</credits>
          <numero/>
          <structure>
-            <ref-structure id="ENSINBU6"/>
-            <ref-structure id="ENSINBU7"/>
+            <ref-structure ref="ENSINBU6"/>
+            <ref-structure ref="ENSINBU7"/>
          </structure>
       </option>
       <option id="CPSINBX2">
@@ -1633,13 +1633,13 @@
          <credits>9</credits>
          <numero/>
          <structure>
-            <ref-structure id="ENSINBU8"/>
-            <ref-structure id="ENSINBU9"/>
-            <ref-structure id="ENSINBU10"/>
-            <ref-structure id="ENSINBU11"/>
-            <ref-structure id="ENSINBU12"/>
-            <ref-structure id="ENSINBU13"/>
-            <ref-structure id="ENSINBU14"/>
+            <ref-structure ref="ENSINBU8"/>
+            <ref-structure ref="ENSINBU9"/>
+            <ref-structure ref="ENSINBU10"/>
+            <ref-structure ref="ENSINBU11"/>
+            <ref-structure ref="ENSINBU12"/>
+            <ref-structure ref="ENSINBU13"/>
+            <ref-structure ref="ENSINBU14"/>
          </structure>
       </option>
       <option id="CPSINCX1">
@@ -1647,29 +1647,29 @@
          <credits>15</credits>
          <numero/>
          <structure>
-            <ref-structure id="ENSINCU4"/>
-            <ref-structure id="ENSINCU5"/>
-            <ref-structure id="ENSINCU6"/>
-            <ref-structure id="ENSINCU7"/>
-            <ref-structure id="ENSINCU8"/>
-            <ref-structure id="ENSINCU9"/>
-            <ref-structure id="ENSINCU10"/>
-            <ref-structure id="ENSINCU11"/>
-            <ref-structure id="ENSINCU12"/>
-            <ref-structure id="ENSINCU13"/>
-            <ref-structure id="ENSINCU14"/>
-            <ref-structure id="ENSINCU15"/>
-            <ref-structure id="ENSINCU16"/>
-            <ref-structure id="ENSINCU17"/>
-            <ref-structure id="ENSINCU18"/>
-            <ref-structure id="ENSINCU19"/>
-            <ref-structure id="ENSINCU20"/>
-            <ref-structure id="ENSINCU21"/>
-            <ref-structure id="ENSINCU22"/>
-            <ref-structure id="ENSINCU23"/>
-            <ref-structure id="ENSINCU24"/>
-            <ref-structure id="ENSINCU25"/>
-            <ref-structure id="ENSINCU26"/>
+            <ref-structure ref="ENSINCU4"/>
+            <ref-structure ref="ENSINCU5"/>
+            <ref-structure ref="ENSINCU6"/>
+            <ref-structure ref="ENSINCU7"/>
+            <ref-structure ref="ENSINCU8"/>
+            <ref-structure ref="ENSINCU9"/>
+            <ref-structure ref="ENSINCU10"/>
+            <ref-structure ref="ENSINCU11"/>
+            <ref-structure ref="ENSINCU12"/>
+            <ref-structure ref="ENSINCU13"/>
+            <ref-structure ref="ENSINCU14"/>
+            <ref-structure ref="ENSINCU15"/>
+            <ref-structure ref="ENSINCU16"/>
+            <ref-structure ref="ENSINCU17"/>
+            <ref-structure ref="ENSINCU18"/>
+            <ref-structure ref="ENSINCU19"/>
+            <ref-structure ref="ENSINCU20"/>
+            <ref-structure ref="ENSINCU21"/>
+            <ref-structure ref="ENSINCU22"/>
+            <ref-structure ref="ENSINCU23"/>
+            <ref-structure ref="ENSINCU24"/>
+            <ref-structure ref="ENSINCU25"/>
+            <ref-structure ref="ENSINCU26"/>
          </structure>
       </option>
       <option id="CPSINCX2">
@@ -1677,13 +1677,13 @@
          <credits>3</credits>
          <numero/>
          <structure>
-            <ref-structure id="ENSINCU4"/>
-            <ref-structure id="ENSINCU5"/>
-            <ref-structure id="ENSINCU6"/>
-            <ref-structure id="ENSINCU7"/>
-            <ref-structure id="ENSINCU19"/>
-            <ref-structure id="ENSINCU20"/>
-            <ref-structure id="ENSINCU21"/>
+            <ref-structure ref="ENSINCU4"/>
+            <ref-structure ref="ENSINCU5"/>
+            <ref-structure ref="ENSINCU6"/>
+            <ref-structure ref="ENSINCU7"/>
+            <ref-structure ref="ENSINCU19"/>
+            <ref-structure ref="ENSINCU20"/>
+            <ref-structure ref="ENSINCU21"/>
          </structure>
       </option>
       <option id="CPSISCX3">
@@ -1691,18 +1691,18 @@
          <credits>15</credits>
          <numero/>
          <structure>
-            <ref-structure id="ENSISCU21"/>
-            <ref-structure id="ENSISCU22"/>
-            <ref-structure id="ENSISCU23"/>
-            <ref-structure id="ENSISCU24"/>
-            <ref-structure id="ENSISCU25"/>
-            <ref-structure id="ENSISCU26"/>
-            <ref-structure id="ENSISCU27"/>
-            <ref-structure id="ENSISCU28"/>
-            <ref-structure id="ENSISCU29"/>
-            <ref-structure id="ENSISCU30"/>
-            <ref-structure id="ENSISCU31"/>
-            <ref-structure id="ENSISCU32"/>
+            <ref-structure ref="ENSISCU21"/>
+            <ref-structure ref="ENSISCU22"/>
+            <ref-structure ref="ENSISCU23"/>
+            <ref-structure ref="ENSISCU24"/>
+            <ref-structure ref="ENSISCU25"/>
+            <ref-structure ref="ENSISCU26"/>
+            <ref-structure ref="ENSISCU27"/>
+            <ref-structure ref="ENSISCU28"/>
+            <ref-structure ref="ENSISCU29"/>
+            <ref-structure ref="ENSISCU30"/>
+            <ref-structure ref="ENSISCU31"/>
+            <ref-structure ref="ENSISCU32"/>
          </structure>
       </option>
       <option id="CPSISCX4">
@@ -1710,29 +1710,29 @@
          <credits>9</credits>
          <numero/>
          <structure>
-            <ref-structure id="ENSISCU1"/>
-            <ref-structure id="ENSISCU4"/>
-            <ref-structure id="ENSISCU5"/>
-            <ref-structure id="ENSISCU6"/>
-            <ref-structure id="ENSISCU7"/>
-            <ref-structure id="ENSISCU8"/>
-            <ref-structure id="ENSISCU55"/>
-            <ref-structure id="ENSISCU3"/>
-            <ref-structure id="ENSISCU2"/>
-            <ref-structure id="ENSISCU33"/>
-            <ref-structure id="ENSISCU34"/>
-            <ref-structure id="ENSISCU35"/>
-            <ref-structure id="ENSISCU36"/>
-            <ref-structure id="ENSISCU37"/>
-            <ref-structure id="ENSISCU38"/>
-            <ref-structure id="ENSISCU39"/>
-            <ref-structure id="ENSISCU40"/>
-            <ref-structure id="ENSISCU41"/>
-            <ref-structure id="ENSISCU42"/>
-            <ref-structure id="ENSISCU43"/>
-            <ref-structure id="ENSISCU44"/>
-            <ref-structure id="ENSISCU45"/>
-            <ref-structure id="ENSISCU46"/>
+            <ref-structure ref="ENSISCU1"/>
+            <ref-structure ref="ENSISCU4"/>
+            <ref-structure ref="ENSISCU5"/>
+            <ref-structure ref="ENSISCU6"/>
+            <ref-structure ref="ENSISCU7"/>
+            <ref-structure ref="ENSISCU8"/>
+            <ref-structure ref="ENSISCU55"/>
+            <ref-structure ref="ENSISCU3"/>
+            <ref-structure ref="ENSISCU2"/>
+            <ref-structure ref="ENSISCU33"/>
+            <ref-structure ref="ENSISCU34"/>
+            <ref-structure ref="ENSISCU35"/>
+            <ref-structure ref="ENSISCU36"/>
+            <ref-structure ref="ENSISCU37"/>
+            <ref-structure ref="ENSISCU38"/>
+            <ref-structure ref="ENSISCU39"/>
+            <ref-structure ref="ENSISCU40"/>
+            <ref-structure ref="ENSISCU41"/>
+            <ref-structure ref="ENSISCU42"/>
+            <ref-structure ref="ENSISCU43"/>
+            <ref-structure ref="ENSISCU44"/>
+            <ref-structure ref="ENSISCU45"/>
+            <ref-structure ref="ENSISCU46"/>
          </structure>
       </option>
       <option id="CPSISCX5">
@@ -1740,16 +1740,16 @@
          <credits>15</credits>
          <numero/>
          <structure>
-            <ref-structure id="ENSISCU1"/>
-            <ref-structure id="ENSISCU4"/>
-            <ref-structure id="ENSISCU5"/>
-            <ref-structure id="ENSISCU6"/>
-            <ref-structure id="ENSISCU7"/>
-            <ref-structure id="ENSISCU8"/>
-            <ref-structure id="ENSISCU55"/>
-            <ref-structure id="ENSISCU3"/>
-            <ref-structure id="ENSISCU2"/>
-            <ref-structure id="ENSISCU29"/>
+            <ref-structure ref="ENSISCU1"/>
+            <ref-structure ref="ENSISCU4"/>
+            <ref-structure ref="ENSISCU5"/>
+            <ref-structure ref="ENSISCU6"/>
+            <ref-structure ref="ENSISCU7"/>
+            <ref-structure ref="ENSISCU8"/>
+            <ref-structure ref="ENSISCU55"/>
+            <ref-structure ref="ENSISCU3"/>
+            <ref-structure ref="ENSISCU2"/>
+            <ref-structure ref="ENSISCU29"/>
          </structure>
       </option>
       <option id="CPSISCX6">
@@ -1757,31 +1757,31 @@
          <credits>9</credits>
          <numero/>
          <structure>
-            <ref-structure id="ENSISCU33"/>
-            <ref-structure id="ENSISCU34"/>
-            <ref-structure id="ENSISCU35"/>
-            <ref-structure id="ENSISCU36"/>
-            <ref-structure id="ENSISCU37"/>
-            <ref-structure id="ENSISCU21"/>
-            <ref-structure id="ENSISCU22"/>
-            <ref-structure id="ENSISCU23"/>
-            <ref-structure id="ENSISCU24"/>
-            <ref-structure id="ENSISCU25"/>
-            <ref-structure id="ENSISCU26"/>
-            <ref-structure id="ENSISCU27"/>
-            <ref-structure id="ENSISCU28"/>
-            <ref-structure id="ENSISCU30"/>
-            <ref-structure id="ENSISCU31"/>
-            <ref-structure id="ENSISCU32"/>
-            <ref-structure id="ENSISCU38"/>
-            <ref-structure id="ENSISCU39"/>
-            <ref-structure id="ENSISCU40"/>
-            <ref-structure id="ENSISCU41"/>
-            <ref-structure id="ENSISCU42"/>
-            <ref-structure id="ENSISCU43"/>
-            <ref-structure id="ENSISCU44"/>
-            <ref-structure id="ENSISCU45"/>
-            <ref-structure id="ENSISCU46"/>
+            <ref-structure ref="ENSISCU33"/>
+            <ref-structure ref="ENSISCU34"/>
+            <ref-structure ref="ENSISCU35"/>
+            <ref-structure ref="ENSISCU36"/>
+            <ref-structure ref="ENSISCU37"/>
+            <ref-structure ref="ENSISCU21"/>
+            <ref-structure ref="ENSISCU22"/>
+            <ref-structure ref="ENSISCU23"/>
+            <ref-structure ref="ENSISCU24"/>
+            <ref-structure ref="ENSISCU25"/>
+            <ref-structure ref="ENSISCU26"/>
+            <ref-structure ref="ENSISCU27"/>
+            <ref-structure ref="ENSISCU28"/>
+            <ref-structure ref="ENSISCU30"/>
+            <ref-structure ref="ENSISCU31"/>
+            <ref-structure ref="ENSISCU32"/>
+            <ref-structure ref="ENSISCU38"/>
+            <ref-structure ref="ENSISCU39"/>
+            <ref-structure ref="ENSISCU40"/>
+            <ref-structure ref="ENSISCU41"/>
+            <ref-structure ref="ENSISCU42"/>
+            <ref-structure ref="ENSISCU43"/>
+            <ref-structure ref="ENSISCU44"/>
+            <ref-structure ref="ENSISCU45"/>
+            <ref-structure ref="ENSISCU46"/>
          </structure>
       </option>
       <option id="CPSISCX7">
@@ -1789,20 +1789,20 @@
          <credits>15</credits>
          <numero/>
          <structure>
-            <ref-structure id="ENSISCU34"/>
-            <ref-structure id="ENSISCU35"/>
-            <ref-structure id="ENSISCU36"/>
-            <ref-structure id="ENSISCU29"/>
-            <ref-structure id="ENSISCU30"/>
-            <ref-structure id="ENSISCU31"/>
-            <ref-structure id="ENSISCU32"/>
-            <ref-structure id="ENSISCU40"/>
-            <ref-structure id="ENSISCU41"/>
-            <ref-structure id="ENSISCU42"/>
-            <ref-structure id="ENSISCU43"/>
-            <ref-structure id="ENSISCU44"/>
-            <ref-structure id="ENSISCU45"/>
-            <ref-structure id="ENSISCU46"/>
+            <ref-structure ref="ENSISCU34"/>
+            <ref-structure ref="ENSISCU35"/>
+            <ref-structure ref="ENSISCU36"/>
+            <ref-structure ref="ENSISCU29"/>
+            <ref-structure ref="ENSISCU30"/>
+            <ref-structure ref="ENSISCU31"/>
+            <ref-structure ref="ENSISCU32"/>
+            <ref-structure ref="ENSISCU40"/>
+            <ref-structure ref="ENSISCU41"/>
+            <ref-structure ref="ENSISCU42"/>
+            <ref-structure ref="ENSISCU43"/>
+            <ref-structure ref="ENSISCU44"/>
+            <ref-structure ref="ENSISCU45"/>
+            <ref-structure ref="ENSISCU46"/>
          </structure>
       </option>
       <option id="CPSISCX8">
@@ -1810,27 +1810,27 @@
          <credits>9</credits>
          <numero/>
          <structure>
-            <ref-structure id="ENSISCU1"/>
-            <ref-structure id="ENSISCU4"/>
-            <ref-structure id="ENSISCU5"/>
-            <ref-structure id="ENSISCU6"/>
-            <ref-structure id="ENSISCU7"/>
-            <ref-structure id="ENSISCU8"/>
-            <ref-structure id="ENSISCU55"/>
-            <ref-structure id="ENSISCU3"/>
-            <ref-structure id="ENSISCU2"/>
-            <ref-structure id="ENSISCU33"/>
-            <ref-structure id="ENSISCU37"/>
-            <ref-structure id="ENSISCU21"/>
-            <ref-structure id="ENSISCU22"/>
-            <ref-structure id="ENSISCU23"/>
-            <ref-structure id="ENSISCU24"/>
-            <ref-structure id="ENSISCU25"/>
-            <ref-structure id="ENSISCU26"/>
-            <ref-structure id="ENSISCU27"/>
-            <ref-structure id="ENSISCU28"/>
-            <ref-structure id="ENSISCU38"/>
-            <ref-structure id="ENSISCU39"/>
+            <ref-structure ref="ENSISCU1"/>
+            <ref-structure ref="ENSISCU4"/>
+            <ref-structure ref="ENSISCU5"/>
+            <ref-structure ref="ENSISCU6"/>
+            <ref-structure ref="ENSISCU7"/>
+            <ref-structure ref="ENSISCU8"/>
+            <ref-structure ref="ENSISCU55"/>
+            <ref-structure ref="ENSISCU3"/>
+            <ref-structure ref="ENSISCU2"/>
+            <ref-structure ref="ENSISCU33"/>
+            <ref-structure ref="ENSISCU37"/>
+            <ref-structure ref="ENSISCU21"/>
+            <ref-structure ref="ENSISCU22"/>
+            <ref-structure ref="ENSISCU23"/>
+            <ref-structure ref="ENSISCU24"/>
+            <ref-structure ref="ENSISCU25"/>
+            <ref-structure ref="ENSISCU26"/>
+            <ref-structure ref="ENSISCU27"/>
+            <ref-structure ref="ENSISCU28"/>
+            <ref-structure ref="ENSISCU38"/>
+            <ref-structure ref="ENSISCU39"/>
          </structure>
       </option>
    </options>
@@ -1840,11 +1840,11 @@
          <credits>15</credits>
          <numero/>
          <structure>
-            <ref-structure id="ENSINCU27"/>
-            <ref-structure id="ENSINCU28"/>
-            <ref-structure id="ENSINCU29"/>
-            <ref-structure id="ENSINCU30"/>
-            <ref-structure id="ENSINCU31"/>
+            <ref-structure ref="ENSINCU27"/>
+            <ref-structure ref="ENSINCU28"/>
+            <ref-structure ref="ENSINCU29"/>
+            <ref-structure ref="ENSINCU30"/>
+            <ref-structure ref="ENSINCU31"/>
          </structure>
       </groupe>
       <groupe id="CPSINCY2">
@@ -1852,13 +1852,13 @@
          <credits>21</credits>
          <numero/>
          <structure>
-            <ref-structure id="ENSINCU27"/>
-            <ref-structure id="ENSINCU28"/>
-            <ref-structure id="ENSINCU30"/>
-            <ref-structure id="ENSINCU40"/>
-            <ref-structure id="ENSINCU48"/>
-            <ref-structure id="ENSINCU49"/>
-            <ref-structure id="ENSINCU50"/>
+            <ref-structure ref="ENSINCU27"/>
+            <ref-structure ref="ENSINCU28"/>
+            <ref-structure ref="ENSINCU30"/>
+            <ref-structure ref="ENSINCU40"/>
+            <ref-structure ref="ENSINCU48"/>
+            <ref-structure ref="ENSINCU49"/>
+            <ref-structure ref="ENSINCU50"/>
          </structure>
       </groupe>
       <groupe id="CPSINCY3">
@@ -1866,7 +1866,7 @@
          <credits>0</credits>
          <numero/>
          <structure>
-            <ref-structure id="ENSINCU67"/>
+            <ref-structure ref="ENSINCU67"/>
          </structure>
       </groupe>
    </groupes>
@@ -1887,8 +1887,8 @@
             <debouches/>
             <lieux/>
             <ref-semestres>
-               <ref-semestre id="CPSISCSC1"/>
-               <ref-semestre id="CPSISDST2"/>
+               <ref-semestre ref="CPSISCSC1"/>
+               <ref-semestre ref="CPSISDST2"/>
             </ref-semestres>
          </parcours>
          <parcours id="PRSIN5B2">
@@ -1900,8 +1900,8 @@
             <debouches/>
             <lieux/>
             <ref-semestres>
-               <ref-semestre id="CPSISCSC2"/>
-               <ref-semestre id="CPSISDST2"/>
+               <ref-semestre ref="CPSISCSC2"/>
+               <ref-semestre ref="CPSISDST2"/>
             </ref-semestres>
          </parcours>
          <parcours id="PRSIN5B3">
@@ -1913,8 +1913,8 @@
             <debouches/>
             <lieux/>
             <ref-semestres>
-               <ref-semestre id="CPSISCSC3"/>
-               <ref-semestre id="CPSISDST2"/>
+               <ref-semestre ref="CPSISCSC3"/>
+               <ref-semestre ref="CPSISDST2"/>
             </ref-semestres>
          </parcours>
       </specialite>
@@ -1935,8 +1935,8 @@
             <debouches/>
             <lieux/>
             <ref-semestres>
-               <ref-semestre id="CPSINCSC1"/>
-               <ref-semestre id="CPSINDST1"/>
+               <ref-semestre ref="CPSINCSC1"/>
+               <ref-semestre ref="CPSINDST1"/>
             </ref-semestres>
          </parcours>
          <parcours id="PRSIN5C2">
@@ -1948,8 +1948,8 @@
             <debouches/>
             <lieux/>
             <ref-semestres>
-               <ref-semestre id="CPSINCSC2"/>
-               <ref-semestre id="CPSINDST1"/>
+               <ref-semestre ref="CPSINCSC2"/>
+               <ref-semestre ref="CPSINDST1"/>
             </ref-semestres>
          </parcours>
       </specialite>
@@ -1969,8 +1969,8 @@
             <debouches/>
             <lieux/>
             <ref-semestres>
-               <ref-semestre id="CPSINCSE1"/>
-               <ref-semestre id="CPSINDST1"/>
+               <ref-semestre ref="CPSINCSE1"/>
+               <ref-semestre ref="CPSINDST1"/>
             </ref-semestres>
          </parcours>
          <parcours id="PRSIN5E2">
@@ -1982,8 +1982,8 @@
             <debouches/>
             <lieux/>
             <ref-semestres>
-               <ref-semestre id="CPSINCSE2"/>
-               <ref-semestre id="CPSINDST1"/>
+               <ref-semestre ref="CPSINCSE2"/>
+               <ref-semestre ref="CPSINDST1"/>
             </ref-semestres>
          </parcours>
       </specialite>
@@ -1997,8 +1997,8 @@
             <debouches/>
             <lieux/>
             <ref-semestres>
-               <ref-semestre id="CPSINAST1"/>
-               <ref-semestre id="CPSINBST1"/>
+               <ref-semestre ref="CPSINAST1"/>
+               <ref-semestre ref="CPSINBST1"/>
             </ref-semestres>
          </parcours>
       </specialite>
@@ -2010,8 +2010,8 @@
             <debouches/>
             <lieux/>
             <ref-semestres>
-               <ref-semestre id="CPSINCSA0"/>
-               <ref-semestre id="CPSINDSA0"/>
+               <ref-semestre ref="CPSINCSA0"/>
+               <ref-semestre ref="CPSINDSA0"/>
             </ref-semestres>
          </parcours>
       </specialite>
@@ -2023,8 +2023,8 @@
             <debouches/>
             <lieux/>
             <ref-semestres>
-               <ref-semestre id="CPSINCSD0"/>
-               <ref-semestre id="CPSINDST1"/>
+               <ref-semestre ref="CPSINCSD0"/>
+               <ref-semestre ref="CPSINDST1"/>
             </ref-semestres>
          </parcours>
       </specialite>
@@ -2036,8 +2036,8 @@
             <debouches/>
             <lieux/>
             <ref-semestres>
-               <ref-semestre id="CPSINCSF0"/>
-               <ref-semestre id="CPSINDST1"/>
+               <ref-semestre ref="CPSINCSF0"/>
+               <ref-semestre ref="CPSINDST1"/>
             </ref-semestres>
          </parcours>
       </specialite>
@@ -2049,8 +2049,8 @@
             <debouches/>
             <lieux/>
             <ref-semestres>
-               <ref-semestre id="CPSINCSG0"/>
-               <ref-semestre id="CPSINDST1"/>
+               <ref-semestre ref="CPSINCSG0"/>
+               <ref-semestre ref="CPSINDST1"/>
             </ref-semestres>
          </parcours>
       </specialite>

@@ -87,7 +87,7 @@
                </numero>
                <structure>
                   <xsl:for-each select="info[@nom = 'structure']">
-                     <ref-structure id="{@value}"/>
+                     <ref-structure ref="{@value}"/>
                   </xsl:for-each>
                </structure>
             </xsl:element>
@@ -168,10 +168,9 @@
    <xsl:template name="ref-semestre">
       <xsl:param name="id"/>
       <xsl:for-each select="//objet[@id = $id]">
-         <ref-semestre id="{@id}"/>
+         <ref-semestre ref="{@id}"/>
       </xsl:for-each>
 
    </xsl:template>
-
 
 </xsl:stylesheet>
