@@ -7,6 +7,7 @@ XSL			= new-data.xsl
 JAVA 		= ue.java
 WEB 		= *.html
 XQ  		= xq.txt
+XQO     = xq.html
 
 all: dtd xsd web tidy xq java
 	
@@ -24,7 +25,7 @@ tidy:
 	tidy -utf8 -im $(HTML)
 
 xq:
-	java -cp saxon9he.jar net.sf.saxon.Query $(XQ) > xquery.html
+	java -cp saxon9he.jar net.sf.saxon.Query $(XQ) > $(XQO)
 
 java:
 	javac $(JAVA)
