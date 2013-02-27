@@ -1,17 +1,30 @@
+xquery version "1.0";
+let $d := doc("new-data.xml") 
+return 
 <html><head/><body>
 {
-for $i in doc("new-data.xml")//intervenant
+for $i in $d//intervenant
 return 
   <div>
-    <h1>{data($i/nom)}</h1>
+    <h1>{data($i/@id)} : {data($i/nom)}</h1>
     <h2>Enseignements</h2>
-    <ul>
     {
-      for $j in doc("new-data.xml")//unite
+      for $j in $d//unite
       where $j/ref-intervenant/@ref = $i/@id
-      return <li>{data($j/nom)}</li>
+      return <p>{data($j/nom)}</p>
     }
-    </ul>
+    <h2>Responsable de spécialité</h2>
+    {
+      for $j in $d//specialite
+      where $j/responsables/ref-intervenant/@ref = $i/@id
+      return <p>{data($j/nom)}</p>
+    }
+    <h2>Intervient dans les parcours</h2>
+    {
+      for $j in $d//parcours
+      where $j/responsables/ref-intervenant/@ref = $i/@id
+      return <p>{data($j/nom)}</p>
+    }
   </div>
 }
 </body>
