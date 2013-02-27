@@ -1,11 +1,14 @@
-DTD			= new-data.dtd
-XML			= new-data.xml
-SCHEMA	= 
-WWW 		= www/
-HTML 		= index.html
-XSL			= new-data.xsl
-JAVA 		= ue.java
-WEB 		= *.html
+DTD				= new-data.dtd
+XML				= new-data.xml
+SCHEMA		= 
+WWW				= www/
+HTML			= index.html
+XSL				= new-data.xsl
+JAVA			= ue
+SRC_JAVA 	= $(patsubst %, %.java, $(JAVA))
+WEB				= *.html
+XQ				= xq.txt
+XQO				= xq.html
 
 all: dtd xsd web tidy xq java
 	
@@ -20,13 +23,14 @@ web: clean_web
 	cd $(WWW) && xsltproc ../$(XSL) ../$(XML) > $(HTML)
 
 tidy:
-	tidy -utf8 -im $(HTML)
+	tidy -utf8 -im $(WWW)*.html
 
 xq:
-	echo "TODO"
+	java -cp saxon9he.jar net.sf.saxon.Query $(XQ) > $(XQO)
 
 java:
-	javac $(JAVA)
+	javac $(SRC_JAVA)
+	java $(JAVA) $(XML)
 
 clean_web:
 	([ -f $(WWW)$(HTML) ] && rm $(WWW)$(WEB)) || echo "Rien à supprimer"
