@@ -384,18 +384,23 @@
         <h3>
             <xsl:value-of select="./nom"/>
         </h3>
-        <h5><xsl:value-of select="./credits"/> credit<xsl:if test="number(./credits) > 1"
-            >s</xsl:if></h5>
+        <h5>
+            <xsl:value-of select="./credits"/> 
+            credit<xsl:if test="number(./credits) > 1">s</xsl:if></h5>
+        <ul>
+            <li><h4>UE(s) Obligatoires</h4></li>
+        <xsl:for-each select="./structure/ref-structure">
+            <xsl:variable name="type"><xsl:value-of select="name(//*[@id = current()/@ref])"/></xsl:variable>
+            <xsl:if test="$type = 'unite'"><xsl:call-template name="s_unite"/></xsl:if>
+        </xsl:for-each>
+        </ul>
         <xsl:call-template name="ref-structure"/>
     </xsl:template>
     <xsl:template name="ref-structure">
         <xsl:for-each select="./structure/ref-structure">
-            <xsl:variable name="type">
-                <xsl:value-of select="name(//*[@id = current()/@ref])"/>
-            </xsl:variable>
-            <xsl:sort select="$type"/>
+            <xsl:variable name="type"><xsl:value-of select="name(//*[@id = current()/@ref])"/></xsl:variable>
             <xsl:choose>
-                <xsl:when test="$type = 'unite'">
+                <xsl:when test="$type = 'unite' and name(../..) != 'semestre'">
                     <xsl:call-template name="s_unite"/>
                 </xsl:when>
             </xsl:choose>
