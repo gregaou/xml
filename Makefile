@@ -1,6 +1,6 @@
 DTD				= new-data.dtd
 XML				= new-data.xml
-SCHEMA		= 
+SCHEMA		= new_master.xsd
 WWW				= www/
 HTML			= index.html
 XSL				= new-data.xsl

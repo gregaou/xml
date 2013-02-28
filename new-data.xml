@@ -48,7 +48,7 @@
          <nom>MASSAT</nom>
          <prenom>Jean Luc</prenom>
          <email>jean-luc.massat@univ-amu.fr</email>
-         <siteweb/>
+         <siteweb>http://jean-luc.massat.perso.luminy.univmed.fr</siteweb>
       </intervenant>
       <intervenant id="IN20">
          <nom>PARIS</nom>
