@@ -3,6 +3,9 @@
   <xs:attributeGroup name="id_required">
     <xs:attribute name="id" use="required" type="xs:ID"/>
   </xs:attributeGroup>
+  <xs:attributeGroup name="ref">
+    <xs:attribute name="ref" use="required" type="xs:IDREF"/>
+  </xs:attributeGroup>
   <xs:complexType name="liste">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" ref="item"/>
@@ -115,7 +118,7 @@
     </xs:complexType>
   </xs:element>
   <xs:attributeGroup name="ref-semestre_attlist">
-    <xs:attribute name="id" use="required" type="xs:IDREF"/>
+    <xs:attributeGroup ref="ref"/>
   </xs:attributeGroup>
   <!-- Fin parcours -->
   <!-- Début spécialités -->
@@ -192,7 +195,7 @@
     </xs:complexType>
   </xs:element>
   <xs:attributeGroup name="ref-structure_attlist">
-    <xs:attribute name="id" use="required" type="xs:IDREF"/>
+    <xs:attributeGroup ref="ref"/>
   </xs:attributeGroup>
   <!-- Fin semestres -->
   <!-- Début options -->
@@ -259,7 +262,7 @@
   <xs:attributeGroup name="unite_attlist">
     <xs:attributeGroup ref="id_required"/>
   </xs:attributeGroup>
-  <xs:element name="credits" type="xs:positiveInteger"/>
+  <xs:element name="credits" type="xs:string"/>
   <xs:element name="resume" type="miseenformebloc"/>
   <xs:element name="ref-intervenant">
     <xs:complexType>
@@ -267,7 +270,7 @@
     </xs:complexType>
   </xs:element>
   <xs:attributeGroup name="ref-intervenant_attlist">
-    <xs:attribute name="ref" use="required" type="xs:IDREF"/>
+    <xs:attributeGroup ref="ref"/>
   </xs:attributeGroup>
   <!-- Fin unite -->
   <!-- Début ref-unite -->
@@ -277,7 +280,7 @@
     </xs:complexType>
   </xs:element>
   <xs:attributeGroup name="ref-unite_attlist">
-    <xs:attribute name="ref" use="required" type="xs:IDREF"/>
+    <xs:attributeGroup ref="ref"/>
   </xs:attributeGroup>
   <!-- Fin ref-unite -->
   <!-- Début intervenants -->

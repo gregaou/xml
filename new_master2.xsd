@@ -163,7 +163,7 @@
   </xs:element>
   <xs:element name="ref-semestre">
     <xs:complexType>
-      <xs:attribute name="id" use="required" type="xs:NCName"/>
+      <xs:attribute name="ref" use="required" type="xs:NCName"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="nom" type="xs:string"/>
@@ -183,7 +183,7 @@
   </xs:element>
   <xs:element name="ref-structure">
     <xs:complexType>
-      <xs:attribute name="id" use="required" type="xs:NCName"/>
+      <xs:attribute name="ref" use="required" type="xs:NCName"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="responsables">
