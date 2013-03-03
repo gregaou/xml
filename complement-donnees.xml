@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE complements SYSTEM "complement-donnees.dtd">
+<complements>
+    <complement ref="PRSIN4T0" node="debouches">test</complement>
+    <complement ref="IN12068" node="siteweb">test</complement>
+    <complement ref="IN12068" node="prenom">test</complement>
+</complements>

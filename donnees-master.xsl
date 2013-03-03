@@ -4,7 +4,7 @@
 
    <xsl:template match="/">
 
-      <xsl:text disable-output-escaping="yes">&#xa;&lt;!DOCTYPE master SYSTEM "new_master.dtd">&#xa;</xsl:text>
+      <xsl:text disable-output-escaping="yes">&#xa;&lt;!DOCTYPE master SYSTEM "master.dtd">&#xa;</xsl:text>
 
       <master>
          <xsl:call-template name="master"/>
@@ -39,7 +39,7 @@
                <email>
                   <xsl:value-of select="info[@nom='mail']/@value"/>
                </email>
-               <siteweb/>
+               <siteweb></siteweb>
             </intervenant>
          </xsl:for-each>
       </intervenants>
@@ -108,7 +108,7 @@
                   <nom>
                      M2 <xsl:value-of select="info[@nom = 'nom-court']/@value"/>
                   </nom>
-                  <description/>
+                  <description></description>
                   <!-- <xsl:value-of select="info[@nom = '']/@value" /></description> -->
                   <xsl:for-each select="info[@nom='structure-specialite']">
                      <xsl:if test="@value != 'PRSIN4T0'">
@@ -151,9 +151,9 @@
                   </xsl:otherwise>
                </xsl:choose>
             </nom>
-            <description/>
-            <debouches/>
-            <lieux/>
+            <description></description>
+            <debouches></debouches>
+            <lieux></lieux>
             <ref-semestres>
                <xsl:for-each select="info[@nom='structure']">
                   <xsl:call-template name="ref-semestre">

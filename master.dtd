@@ -4,9 +4,12 @@
 <!ENTITY stjerome  "St Jérôme" >
 
 <!ENTITY % id_required "id  ID  #REQUIRED">
+<!ENTITY % ref         "ref IDREF #REQUIRED">
 
 <!ENTITY % liste       "(item*)" >
 <!ENTITY % liste_nv    "(item+)">
+
+<!ENTITY % structures  "(nom,credits,numero,structure)">
 
 <!-- Début Mise en forme -->
 <!ENTITY % miseenformebloc "(p|ul)+" >
@@ -29,30 +32,52 @@
 <!ELEMENT nom  (#PCDATA)>
 
 <!-- Début parcours -->
-<!ELEMENT parcours (responsables,nom,description,debouches,lieux,semestre+)>
+<!ELEMENT parcours (responsables,nom,description,debouches,lieux,ref-semestres)>
 <!ATTLIST parcours  %id_required;>
 
 <!ELEMENT responsables (ref-intervenant*)  >
-<!ELEMENT description  %miseenformebloc;  >
+<!ELEMENT description  (#PCDATA)  >
 <!ELEMENT debouches    %liste;    >
 <!ELEMENT lieux        %liste;    >
+
+<!ELEMENT ref-semestres (ref-semestre,ref-semestre) >
+<!ELEMENT ref-semestre EMPTY      >
+<!ATTLIST ref-semestre %ref;>
 <!-- Fin parcours -->
 
-<!-- Début spécialité -->
+<!-- Début spécialités -->
+<!ELEMENT specialites (specialite)+ >
 <!ELEMENT specialite  ((responsables,nom,description,parcours+)|parcours)  >
 <!ATTLIST specialite  %id_required;>
-<!-- Fin spécialité -->	
-
-<!-- Début semestre -->
-<!ELEMENT semestre (bloc+)>
-<!ATTLIST semestre num CDATA #REQUIRED>
-<!ELEMENT bloc (ref-unite)+   >
-<!ATTLIST bloc role (obligatoires|options) #REQUIRED>
-<!-- Fin semestre -->
+<!-- Fin spécialités -->	
 
 <!-- Début master -->
-<!ELEMENT master (intervenants,unites,specialite*) >
+<!ELEMENT master (intervenants,unites,semestres,options,groupes,specialites) >
 <!-- Fin master -->
+
+<!-- Début semestres -->
+<!ELEMENT semestres (semestre)+ >
+<!ELEMENT semestre  %structures;>
+<!ATTLIST semestre  %id_required;>
+
+<!ELEMENT numero (#PCDATA) >
+<!ELEMENT structure (ref-structure)+  >
+<!ELEMENT ref-structure EMPTY      >
+<!ATTLIST ref-structure %ref;>
+<!-- Fin semestres  -->
+
+
+<!-- Début options  -->
+<!ELEMENT options (option)+ >
+<!ELEMENT option  %structures;>
+<!ATTLIST option  %id_required;>
+<!-- Fin options  -->
+
+<!-- Début groupes  -->
+<!ELEMENT groupes (groupe)+ >
+<!ELEMENT groupe  %structures;>
+<!ATTLIST groupe  %id_required;>
+<!-- Fin groupes  -->
 
 <!-- Début unite -->
 <!ELEMENT unites (unite*)>
@@ -61,14 +86,13 @@
 
 <!ELEMENT credits         (#PCDATA)  >
 <!ELEMENT resume          %miseenformebloc;  >
-<!ELEMENT plan            %liste; >
 <!ELEMENT ref-intervenant EMPTY      >
-<!ATTLIST ref-intervenant ref IDREF #REQUIRED>
+<!ATTLIST ref-intervenant %ref;>
 <!-- Fin unite -->
 
 <!-- Début ref-unite -->
 <!ELEMENT ref-unite EMPTY>
-<!ATTLIST ref-unite ref IDREF #REQUIRED>
+<!ATTLIST ref-unite %ref;>
 <!-- Fin ref-unite -->
 
 <!-- Début intervenants -->
