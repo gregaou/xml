@@ -7,7 +7,7 @@ XSL				= new-data.xsl
 JAVA			= ue
 SRC_JAVA 	= $(patsubst %, %.java, $(JAVA))
 WEB				= *.html
-XQ				= xq.txt
+XQ				= xquery/xq.txt
 XQO				= xq.html
 
 all: dtd xsd web tidy xq java
@@ -26,7 +26,7 @@ tidy:
 	tidy -utf8 -im $(WWW)*.html
 
 xq:
-	java -cp saxon9he.jar net.sf.saxon.Query $(XQ) > $(XQO)
+	java -cp _old/saxon9he.jar net.sf.saxon.Query $(XQ) > $(XQO)
 
 java:
 	javac $(SRC_JAVA)
