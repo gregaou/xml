@@ -1,5 +1,5 @@
 xquery version "1.0";
-let $d := doc("new-data.xml") 
+let $d := doc("../_old/master.xml") 
 return 
 <html>
 <head>
@@ -17,24 +17,16 @@ return
   <div class="">
     <h1>{data($i/@id)} : {data($i/nom)}</h1>
     {
-      if($d//unite/ref-intervenant/@ref = $i/@id) then ( 
-        <h2>Enseignements</h2>
-      ) else ()
-    }
-    {
       if($d//unite/ref-intervenant/@ref = $i/@id) then (
+        <h2>Enseignements</h2>,
         for $j in $d//unite
         where $j/ref-intervenant/@ref = $i/@id
         return <p>{data($j/nom)}</p>
       ) else ()
     }
     {
-      if($d//specialite/responsables/ref-intervenant/@ref = $i/@id) then ( 
-        <h2>Responsable de spécialité</h2> 
-      ) else ()
-    }
-    {
       if($d//specialite/responsables/ref-intervenant/@ref = $i/@id) then (  
+        <h2>Responsable de spécialité</h2>,
         for $j in $d//specialite
         where $j/responsables/ref-intervenant/@ref = $i/@id
         return <p>{data($j/nom)}</p>
@@ -42,11 +34,7 @@ return
     }
     {
       if($d//parcours/responsables/ref-intervenant/@ref = $i/@id) then ( 
-        <h2>Intervient dans les parcours</h2> 
-      ) else ()
-    }
-    {
-      if($d//parcours/responsables/ref-intervenant/@ref = $i/@id) then ( 
+        <h2>Intervient dans les parcours</h2>,
         for $j in $d//parcours
         where $j/responsables/ref-intervenant/@ref = $i/@id
         return <p>{
