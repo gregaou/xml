@@ -1,5 +1,5 @@
 xquery version "1.0";
-let $d := doc("../_old/master.xml") 
+let $d := doc("master.xml") 
 return 
 <html>
 <head>

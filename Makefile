@@ -1,16 +1,17 @@
-DTD				= new-data.dtd
-XML				= new-data.xml
-SCHEMA		= new_master.xsd
+MAIN      = master
+DTD				= $(MAIN).dtd
+XML				= $(MAIN).xml
+SCHEMA		= $(MAIN).xsd
+XSL				= $(MAIN).xsl
 WWW				= www/
 HTML			= index.html
-XSL				= new-data.xsl
 JAVA			= ue
 SRC_JAVA 	= $(patsubst %, %.java, $(JAVA))
 WEB				= *.html
-XQ				= xquery/xq.txt
+XQ				= xq.txt
 XQO				= xq.html
 
-all: dtd xsd web tidy xq java
+all: $(XML) dtd xsd web tidy xq java
 	
 
 dtd:
@@ -20,17 +21,20 @@ xsd:
 	xmllint --valid --noout --schema $(SCHEMA) $(XML)
 
 web: clean_web
-	cd $(WWW) && xsltproc ../$(XSL) ../$(XML) > $(HTML)
+	cp index.htm $(WWW)/$(HTML)
+	cd $(WWW) && xsltproc ../$(XSL) ../$(XML)
 
 tidy:
 	tidy -utf8 -im $(WWW)*.html
 
 xq:
-	java -cp _old/saxon9he.jar net.sf.saxon.Query $(XQ) > $(XQO)
+	java -cp java_tools/saxon9he.jar net.sf.saxon.Query $(XQ) > $(XQO)
 
 java:
-	javac $(SRC_JAVA)
-	java $(JAVA) $(XML)
+	cd java_tools/ && javac $(SRC_JAVA) && java $(JAVA) ../$(XML)
+
+$(XML): donnees-master.xsl donnees-master.xml
+	xsltproc $^ > $(XML)
 
 clean_web:
 	([ -f $(WWW)$(HTML) ] && rm $(WWW)$(WEB)) || echo "Rien à supprimer"
