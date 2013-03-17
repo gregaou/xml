@@ -44,6 +44,10 @@
 
         <h2>Java</h2>
         <p>Le code source Java ue.java permet de naviguer dans la structure à la recherche des noms des unités pour ensuite les afficher dans la sortie standard. Le principe est simple : récupérer un document DOM en mémoire, récupérer les unités, les parcourir pour les afficher.</p>
+
+        <h2>XSLT</h2>
+        <p>Pour générer le fichier master.xml, donnees-master.xml a été utilisé, ainsi, un document XSLT a été écrit pour transformer les données disponibles vers notre structure de données (stocké dans donnees-master.xsl).</p>
+        <p>Afin de compléter les données (ajout des lieux, etc, ...) nous utilisont un complément de données, stocké dans complement-donnees.xml, ainsi, en appliquant complement-donnees.xsl sur master.xml, master.xml se voit modifié pour intégrer les modifications présentes dans complement-donnees.xml. (Il faut utiliser Saxon pour la génération).</p>
       </div>
       <div class="span2"></div>
     </div>

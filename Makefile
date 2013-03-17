@@ -32,8 +32,9 @@ xq:
 java:
 	cd java_tools/ && javac $(SRC_JAVA) && java $(JAVA) ../$(XML)
 
-$(XML): donnees-master.xsl donnees-master.xml
-	xsltproc $^ > $(XML)
+#$(XML): donnees-master.xsl donnees-master.xml
+	#xsltproc $^ > $(XML)
+	#java -cp java_tools/saxon9he.jar net.sf.saxon.Transform master.xml complement-donnees.xsl
 
 clean_web:
 	([ -f $(WWW)$(HTML) ] && rm $(WWW)$(WEB)) || echo "Rien à supprimer"
