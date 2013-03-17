@@ -21,7 +21,6 @@ xsd:
 	xmllint --valid --noout --schema $(SCHEMA) $(XML)
 
 web: clean_web
-	cp index.htm $(WWW)/$(HTML)
 	cd $(WWW) && xsltproc ../$(XSL) ../$(XML)
 
 tidy:

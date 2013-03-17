@@ -13,6 +13,7 @@
         <xsl:call-template name="intervenants"/>
         <xsl:call-template name="unites"/>
         <xsl:call-template name="specialites"/>
+        <xsl:call-template name="index"/>
     </xsl:template>
 
     <!-- Début Génération du squelette (menu + header + parsing($selected) + footer) -->
@@ -56,7 +57,7 @@
             </html>
         </xsl:document>
     </xsl:template>
-    <!-- Début Génération du squelette (menu + header + parsing($selected) + footer) -->
+    <!-- Fin Génération du squelette (menu + header + parsing($selected) + footer) -->
 
     <!-- Début Génération du menu -->
     <xsl:template name="menu">
@@ -96,6 +97,51 @@
         </ul>
     </xsl:template>
     <!-- Fin Génération du menu -->
+
+    <xsl:template name="index">
+        <xsl:document href="index.html" method="xml" indent="yes" encoding="utf-8"
+            doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
+            doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
+            omit-xml-declaration="yes">
+            <html>
+                <head>
+                    <title>Index</title>
+                    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+                    <link href="css/master.css" rel="stylesheet" type="text/css"/>
+                </head>
+                <body>
+                    <div class="row-fluid">
+                        <div class="page-header">
+                            <img src="img/banniere3.png" alt="Logo DIL" title="$title"/>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row-fluid">
+                            <div class="span4">
+                                <xsl:call-template name="menu"/>
+                            </div>
+                            <div class="span8 data" id="content">
+                              <xsl:call-template name="faire-une-liste">
+                                <xsl:with-param name="objets" select="//unite[credits = 3]/nom" />
+                                <xsl:with-param name="nom" select="'Liste des UE de 3 crédits'" />
+                              </xsl:call-template>
+
+                              
+                              <!-- TODO: Modifier unite pour gérer les lieux
+                              <xsl:call-template name="faire-une-liste">
+                                <xsl:with-param name="objets" value="//intervenants[//unite[count(lieu) = 1 and lieu=&luminy;]/@ref-intervenant=@id]" />
+                              <xsl:with-param name="nom" value="Intervenants n'enseignants qu'à Luminy" />
+                              -->
+                            </div>
+                        </div>
+                    </div>
+                    <script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"/>
+                    <script src="js/bootstrap.min.js" type="text/javascript"/>
+                    <!--<script src="js/master.js" type="text/javascript"/>-->
+                </body>
+            </html>
+        </xsl:document>
+    </xsl:template>
 
     <!-- Début Génération de la page des intervenants -->
     <xsl:template name="intervenants">
@@ -525,9 +571,11 @@
         <h4>
             <xsl:value-of select="$nom"/>
         </h4>
+        <ul>
         <xsl:for-each select="$objets">
-            <xsl:apply-templates select="." mode="ref"/>
+            <li><xsl:apply-templates select="." mode="ref"/></li>
         </xsl:for-each>
+        </ul>
     </xsl:template>
 
     <!--

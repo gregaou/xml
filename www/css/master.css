@@ -10,7 +10,8 @@ body {
 .intervenants,
 .intervenant,
 .unite,
-.unites
+.unites,
+.data
 {
    background: #fff;
 }
@@ -20,7 +21,8 @@ body {
 .intervenants,
 .intervenant,
 .unite,
-.unites
+.unites,
+.data
 {
    padding: 15px;
    border: 1px solid transparent;
@@ -51,54 +53,12 @@ body {
 	float: left;
 }
 
-.parcours h1,
-.parcours h2,
-.parcours h3,
-.parcours h4,
-.parcours h5,
-.parcours h6,
-.specialites h1,
-.specialites h2,
-.specialites h3,
-.specialites h4,
-.specialites h5,
-.specialites h6,
-.specialite h1,
-.specialite h2,
-.specialite h3,
-.specialite h4,
-.specialite h5,
-.specialite h6,
-.intervenants h1,
-.intervenants h2,
-.intervenants h3,
-.intervenants h4,
-.intervenants h5,
-.intervenants h6,
-.intervenant h1,
-.intervenant h2,
-.intervenant h3,
-.intervenant h4,
-.intervenant h5,
-.intervenant h6,
-.unite h1,
-.unite h2,
-.unite h3,
-.unite h4,
-.unite h5,
-.unite h6 ,
-.content h1,
-.content h2,
-.content h3,
-.content h4,
-.content h5,
-.content h6,
-.unites h1,
-.unites h2,
-.unites h3,
-.unites h4,
-.unites h5,
-.unites h6 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 
 {
    font-family: Oswald, sans-serif;
 }
