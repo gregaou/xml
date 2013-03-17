@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Documentation</title>
+  <link href="www/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="www/css/master.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <div class="container">
+    <div class="row-fluid">
+      <div class="span2"></div>
+      <div class="span8 data">
+        <h1>Documentation</h1>
+        <h2>Structure du master</h2>
+        <p>Un master se compose d'intervenants, d'unités, de semestres, d'options, de groupes et de spécialités.</p>
+        <h3>Intervenants</h3>
+        <p>Chaque intervenant est identifiable avec son attribut id. Il se compose d'un nom, d'un prénom, d'une adresse email et d'un site web.</p>
+        <h3>Unités</h3>
+        <p>Une unité est identifiable avec son attribut id. Elle se compose d'un nombre de crédits, d'un résumé, d'un intervenant responsable et d'une liste d'intervenants qui interviennent dans cette unité.</p>
+        <h3>Semestres</h3>
+        <p>Un semestre se compose d'un nom, d'un nombre de crédits, d'un numéro ainsi que d'une liste de références qui va représenter la liste des unités qui le composent.</p>
+        <p>A un semestre on attribue un identifiant (id).</p>
+        <h3>Options</h3>
+        <p>Une option est identifée avec son attribut id. Elle se compose d'un nom, d'un nombre de crédits, d'un numéro et d'une liste d'unités enseignées dans ce bloc d'options.</p>
+        <h3>Groupes</h3>
+        <p>Un groupe représente plusieurs unités enseignées. Chaque groupe se compose d'un nom, d'un nombre de crédits, d'un numéro et d'une liste d'unités enseignées dans ce groupe d'unités.</p>
+        <h3>Specialités</h3>
+        <p>Une spécialité (identifiée par son attribut id) peut être un parcours ou bien définie par un responsable, un nom, une description puis un ou plusieurs parcours.</p>
+        <h3>Parcours</h3>
+        <p>Un parcours est identifié (par id). Il est composé d'un responsable, d'un nom, d'une description, d'une liste de debouchés, d'une liste de lieux et d'une référence vers la composition de ses (deux) semestres.</p>
+
+        <h2>Structure du site web</h2>
+        <h3>Localisation</h3>
+        <p>Le site web se trouve dans le dossier www</p>
+        <h3>Fonctionnement global</h3>
+        <p>Les pages html sont générées automatiquement par le Makefile en faisant make web qui va alors utiliser
+        une feuille XSL pour transformer le xml en plusieurs documents HTML.</p>
+        <p>Le framework CSS Bootstrap est utilisé pour rendre le site plus portable.</p>
+        <p>Chaque intervenant, unité, parcours et spécialité est exporté dans un fichier HTML séparé.</p>
+
+        <h2>XQuery</h2>
+        <p>La requête se trouve dans le fichier xq.txt, saxon est utilisé pour exécuter la requête.<p>
+
+        <h2>Java</h2>
+        <p>Le code source Java ue.java permet de naviguer dans la structure à la recherche des noms des unités pour ensuite les afficher dans la sortie standard. Le principe est simple : récupérer un document DOM en mémoire, récupérer les unités, les parcourir pour les afficher.</p>
+      </div>
+      <div class="span2"></div>
+    </div>
+    </div>
+    <script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
+    <script src="www/js/bootstrap.min.js" type="text/javascript"></script>
+</body>
+</html>
