@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<xsl:stylesheet version="1.1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<xsl:stylesheet version="1.1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <xsl:output method="xml" indent="yes" encoding="utf-8"
         doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
         doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
@@ -154,7 +153,7 @@
     <xsl:template match="intervenants">
         <div id="intervenants" class="intervenants">
             <h1>Intervenants</h1>
-            <table class="table table-striped">
+            <table class="table table-striped" summary="Liste des intervenants">
                 <tr>
                     <th>Personne</th>
                     <th>Email</th>
@@ -276,7 +275,7 @@
                 </xsl:for-each>
             </span>
             <h1>Liste des unités par nom</h1>
-            <table class="table table-striped">
+            <table class="table table-striped" summary="Liste des unités">
                 <xsl:for-each select="./unite">
                     <xsl:sort select="nom"/>
                     <tr>
@@ -390,10 +389,12 @@
             <h1>
                 <xsl:value-of select="nom"/>
             </h1>
+            <xsl:if test="string(description) != ''">
             <h2>Description</h2>
             <p>
                 <xsl:value-of select="description"/>
             </p>
+            </xsl:if>
             <xsl:apply-templates select="responsables"/>
         </div>
         <xsl:for-each select="./parcours">
@@ -419,10 +420,12 @@
                     </h1>
                 </xsl:otherwise>
             </xsl:choose>
+            <xsl:if test="string(description) != ''">
             <h2>Description</h2>
             <p>
                 <xsl:value-of select="description"/>
             </p>
+            </xsl:if>
             <xsl:apply-templates select="responsables"/>
             <xsl:apply-templates select="debouches"/>
             <xsl:apply-templates select="lieux"/>
@@ -430,6 +433,7 @@
         </div>
     </xsl:template>
     <xsl:template match="responsables">
+    <xsl:if test="ref-intervenant">
         <h2>Responsables</h2>
         <ul>
             <xsl:for-each select="ref-intervenant">
@@ -441,26 +445,23 @@
                 </li>
             </xsl:for-each>
         </ul>
+    </xsl:if>
     </xsl:template>
     <xsl:template match="lieux">
+    	<xsl:if test="string(lieux) != ''">
         <h2>Lieux</h2>
-        <ul>
-            <xsl:for-each select="item">
-                <li>
-                    <xsl:value-of select="."/>
-                </li>
-            </xsl:for-each>
-        </ul>
+        <p>
+        	<xsl:value-of select="."/>
+        </p>
+      </xsl:if>
     </xsl:template>
     <xsl:template match="debouches">
+    	<xsl:if test="string(debouches) != ''">
         <h2>Débouchés</h2>
-        <ul>
-            <xsl:for-each select="item">
-                <li>
-                    <xsl:value-of select="."/>
-                </li>
-            </xsl:for-each>
-        </ul>
+        <p>
+        	<xsl:value-of select="."/>
+        </p>
+    	</xsl:if>
     </xsl:template>
     <xsl:template match="ref-semestres">
         <xsl:for-each select="./ref-semestre">
@@ -478,7 +479,9 @@
             <li>
                 <h4>UE(s) Obligatoires</h4>
             </li>
-            <xsl:for-each select="./structure/ref-structure">
+            <xsl:if test="./structure/ref-structure">
+            <li>
+	           <xsl:for-each select="./structure/ref-structure">
                 <xsl:variable name="type">
                     <xsl:value-of select="name(//*[@id = current()/@ref])"/>
                 </xsl:variable>
@@ -486,17 +489,19 @@
                     <xsl:call-template name="s_unite"/>
                 </xsl:if>
             </xsl:for-each>
-        </ul>
+            </li>
+            </xsl:if>
+					</ul>
         <xsl:call-template name="ref-structure"/>
     </xsl:template>
     <xsl:template name="ref-structure">
-        <xsl:for-each select="./structure/ref-structure">
+	      <xsl:for-each select="./structure/ref-structure">
             <xsl:variable name="type">
                 <xsl:value-of select="name(//*[@id = current()/@ref])"/>
             </xsl:variable>
             <xsl:choose>
                 <xsl:when test="$type = 'unite' and name(../..) != 'semestre'">
-                    <xsl:call-template name="s_unite"/>
+                    <li class="list-deco"><xsl:call-template name="s_unite"/></li>
                 </xsl:when>
             </xsl:choose>
             <xsl:choose>

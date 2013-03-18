@@ -63,6 +63,10 @@ h6
    font-family: Oswald, sans-serif;
 }
 
+.list-deco {
+	list-style-type: none; 
+}
+
 .content
 {
   background-color: rgba(255, 255, 255, .7);

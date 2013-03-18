@@ -1,4 +1,3 @@
-
 <!ENTITY % luminy    "Luminy">
 <!ENTITY % stjerome  "St Jérôme">
 
@@ -36,8 +35,8 @@
 
 <!ELEMENT responsables (ref-intervenant*)  >
 <!ELEMENT description  (#PCDATA)  >
-<!ELEMENT debouches    %liste;    >
-<!ELEMENT lieux        %liste;    >
+<!ELEMENT debouches    (#PCDATA)  >
+<!ELEMENT lieux        (#PCDATA)  >
 
 <!ELEMENT ref-semestres (ref-semestre,ref-semestre) >
 <!ELEMENT ref-semestre EMPTY      >
