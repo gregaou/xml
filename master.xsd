@@ -1,5 +1,171 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+  <xs:simpleType name="emailAddress">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="webAddress">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="http://[a-zA-Z0-9._%-]+\.[a-zA-Z]{2,4}" />
+      <xs:pattern value="https://[a-zA-Z0-9._%-]+\.[a-zA-Z]{2,4}" />
+      <xs:pattern value="" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:attributeGroup name="id_required">
+    <xs:attribute name="id" use="required" type="xs:ID"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="ref">
+    <xs:attribute name="ref" use="required" type="xs:IDREF"/>
+  </xs:attributeGroup>
+  <xs:complexType name="liste">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="item"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="structures">
+    <xs:sequence>
+      <xs:element ref="nom"/>
+      <xs:element ref="credits"/>
+      <xs:element ref="numero"/>
+      <xs:element ref="structure"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- Début Mise en forme -->
+  <xs:complexType name="miseenformebloc">
+    <xs:choice maxOccurs="unbounded">
+      <xs:element ref="p"/>
+      <xs:element ref="ul"/>
+    </xs:choice>
+  </xs:complexType>
+  <xs:complexType name="miseenformeinline" mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="lien"/>
+      <xs:element ref="span"/>
+      <xs:element ref="br"/>
+    </xs:choice>
+  </xs:complexType>
+  <xs:element name="ul">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="li"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="li">
+    <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="lien"/>
+        <xs:element ref="span"/>
+        <xs:element ref="br"/>
+        <xs:element ref="ul"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="p" type="miseenformeinline"/>
+  <xs:element name="lien">
+    <xs:complexType mixed="true">
+      <xs:attributeGroup ref="lien_attlist"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="lien_attlist">
+    <xs:attribute name="url" use="required"/>
+  </xs:attributeGroup>
+  <xs:element name="span">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="miseenformeinline">
+          <xs:attributeGroup ref="span_attlist"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="span_attlist">
+    <xs:attribute name="class" use="required"/>
+  </xs:attributeGroup>
+  <xs:element name="br">
+    <xs:complexType/>
+  </xs:element>
+  <!-- Fin Mise en forme -->
+  <xs:element name="item" type="xs:string"/>
+  <xs:element name="nom" type="xs:string"/>
+  <!-- Début parcours -->
+  <xs:element name="parcours">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="responsables"/>
+        <xs:element ref="nom"/>
+        <xs:element ref="description"/>
+        <xs:element ref="debouches"/>
+        <xs:element ref="lieux"/>
+        <xs:element ref="ref-semestres"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="parcours_attlist"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="parcours_attlist">
+    <xs:attributeGroup ref="id_required"/>
+  </xs:attributeGroup>
+  <xs:element name="responsables">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="ref-intervenant"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="description" type="xs:string"/>
+  <xs:element name="debouches" type="xs:string"/>
+  <xs:element name="lieux" type="liste"/>
+  <xs:element name="ref-semestres">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="2" maxOccurs="2" ref="ref-semestre" />
+      </xs:sequence>
+    <!-- Ou alors
+      <xs:sequence>
+        <xs:element ref="ref-semestre"/>
+        <xs:element ref="ref-semestre"/>
+      </xs:sequence>
+      -->
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ref-semestre">
+    <xs:complexType>
+      <xs:attributeGroup ref="ref-semestre_attlist"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="ref-semestre_attlist">
+    <xs:attributeGroup ref="ref"/>
+  </xs:attributeGroup>
+  <!-- Fin parcours -->
+  <!-- Début spécialités -->
+  <xs:element name="specialites">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="specialite"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="specialite">
+    <xs:complexType>
+      <xs:choice>
+        <xs:sequence>
+          <xs:element ref="responsables"/>
+          <xs:element ref="nom"/>
+          <xs:element ref="description"/>
+          <xs:element maxOccurs="unbounded" ref="parcours"/>
+        </xs:sequence>
+        <xs:element ref="parcours"/>
+      </xs:choice>
+      <xs:attributeGroup ref="specialite_attlist"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="specialite_attlist">
+    <xs:attributeGroup ref="id_required"/>
+  </xs:attributeGroup>
+  <!-- Fin spécialités -->
+  <!-- Début master -->
   <xs:element name="master">
     <xs:complexType>
       <xs:sequence>
@@ -12,33 +178,91 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="intervenants">
+  <!-- Fin master -->
+  <!-- Début semestres -->
+  <xs:element name="semestres">
     <xs:complexType>
       <xs:sequence>
-        <xs:element maxOccurs="unbounded" ref="intervenant"/>
+        <xs:element maxOccurs="unbounded" ref="semestre"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="intervenant">
+  <xs:element name="semestre">
     <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="nom"/>
-        <xs:element ref="prenom"/>
-        <xs:element ref="email"/>
-        <xs:element ref="siteweb"/>
-      </xs:sequence>
-      <xs:attribute name="id" use="required" type="xs:NCName"/>
+      <xs:complexContent>
+        <xs:extension base="structures">
+          <xs:attributeGroup ref="semestre_attlist"/>
+        </xs:extension>
+      </xs:complexContent>
     </xs:complexType>
   </xs:element>
-  <xs:element name="prenom" type="xs:string"/>
-  <xs:element name="email" type="xs:string"/>
-  <xs:element name="siteweb">
-    <xs:complexType/>
+  <xs:attributeGroup name="semestre_attlist">
+    <xs:attributeGroup ref="id_required"/>
+  </xs:attributeGroup>
+  <xs:element name="numero" type="xs:string"/>
+  <xs:element name="structure">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="ref-structure"/>
+      </xs:sequence>
+    </xs:complexType>
   </xs:element>
+  <xs:element name="ref-structure">
+    <xs:complexType>
+      <xs:attributeGroup ref="ref-structure_attlist"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="ref-structure_attlist">
+    <xs:attributeGroup ref="ref"/>
+  </xs:attributeGroup>
+  <!-- Fin semestres -->
+  <!-- Début options -->
+  <xs:element name="options">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="option"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="option">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="structures">
+          <xs:attributeGroup ref="option_attlist"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="option_attlist">
+    <xs:attributeGroup ref="id_required"/>
+  </xs:attributeGroup>
+  <!-- Fin options -->
+  <!-- Début groupes -->
+  <xs:element name="groupes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="groupe"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="groupe">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="structures">
+          <xs:attributeGroup ref="groupe_attlist"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="groupe_attlist">
+    <xs:attributeGroup ref="id_required"/>
+  </xs:attributeGroup>
+  <!-- Fin groupes -->
+  <!-- Début unite -->
   <xs:element name="unites">
     <xs:complexType>
       <xs:sequence>
-        <xs:element maxOccurs="unbounded" ref="unite"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="unite"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -50,150 +274,57 @@
         <xs:element ref="resume"/>
         <xs:element minOccurs="0" maxOccurs="unbounded" ref="ref-intervenant"/>
       </xs:sequence>
-      <xs:attribute name="id" use="required" type="xs:NCName"/>
+      <xs:attributeGroup ref="unite_attlist"/>
     </xs:complexType>
   </xs:element>
-  <xs:element name="resume">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="p"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="p" type="xs:string"/>
-  <xs:element name="semestres">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element maxOccurs="unbounded" ref="semestre"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="semestre">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="nom"/>
-        <xs:element ref="credits"/>
-        <xs:element ref="numero"/>
-        <xs:element ref="structure"/>
-      </xs:sequence>
-      <xs:attribute name="id" use="required" type="xs:NCName"/>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="options">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element maxOccurs="unbounded" ref="option"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="option">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="nom"/>
-        <xs:element ref="credits"/>
-        <xs:element ref="numero"/>
-        <xs:element ref="structure"/>
-      </xs:sequence>
-      <xs:attribute name="id" use="required" type="xs:NCName"/>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="groupes">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element maxOccurs="unbounded" ref="groupe"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="groupe">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="nom"/>
-        <xs:element ref="credits"/>
-        <xs:element ref="numero"/>
-        <xs:element ref="structure"/>
-      </xs:sequence>
-      <xs:attribute name="id" use="required" type="xs:NCName"/>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="specialites">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element maxOccurs="unbounded" ref="specialite"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="specialite">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:sequence minOccurs="0">
-          <xs:element ref="responsables"/>
-          <xs:element ref="nom"/>
-          <xs:element ref="description"/>
-        </xs:sequence>
-        <xs:element maxOccurs="unbounded" ref="parcours"/>
-      </xs:sequence>
-      <xs:attribute name="id" use="required" type="xs:NCName"/>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="parcours">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="responsables"/>
-        <xs:element ref="nom"/>
-        <xs:element ref="description"/>
-        <xs:element ref="debouches"/>
-        <xs:element ref="lieux"/>
-        <xs:element ref="ref-semestres"/>
-      </xs:sequence>
-      <xs:attribute name="id" use="required" type="xs:NCName"/>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="debouches">
-    <xs:complexType/>
-  </xs:element>
-  <xs:element name="lieux">
-    <xs:complexType/>
-  </xs:element>
-  <xs:element name="ref-semestres">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element maxOccurs="unbounded" ref="ref-semestre"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="ref-semestre">
-    <xs:complexType>
-      <xs:attribute name="ref" use="required" type="xs:NCName"/>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="nom" type="xs:string"/>
-  <xs:element name="credits" type="xs:integer"/>
+  <xs:attributeGroup name="unite_attlist">
+    <xs:attributeGroup ref="id_required"/>
+  </xs:attributeGroup>
+  <xs:element name="credits" type="xs:unsignedInt"/>
+  <xs:element name="resume" type="miseenformebloc"/>
   <xs:element name="ref-intervenant">
     <xs:complexType>
-      <xs:attribute name="ref" use="required" type="xs:NCName"/>
+      <xs:attributeGroup ref="ref-intervenant_attlist"/>
     </xs:complexType>
   </xs:element>
-  <xs:element name="numero" type="xs:string"/>
-  <xs:element name="structure">
+  <xs:attributeGroup name="ref-intervenant_attlist">
+    <xs:attributeGroup ref="ref"/>
+  </xs:attributeGroup>
+  <!-- Fin unite -->
+  <!-- Début ref-unite -->
+  <xs:element name="ref-unite">
+    <xs:complexType>
+      <xs:attributeGroup ref="ref-unite_attlist"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="ref-unite_attlist">
+    <xs:attributeGroup ref="ref"/>
+  </xs:attributeGroup>
+  <!-- Fin ref-unite -->
+  <!-- Début intervenants -->
+  <xs:element name="intervenants">
     <xs:complexType>
       <xs:sequence>
-        <xs:element maxOccurs="unbounded" ref="ref-structure"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="intervenant"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="ref-structure">
-    <xs:complexType>
-      <xs:attribute name="ref" use="required" type="xs:NCName"/>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="responsables">
+  <xs:element name="intervenant">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" maxOccurs="unbounded" ref="ref-intervenant"/>
+        <xs:element ref="nom"/>
+        <xs:element ref="prenom"/>
+        <xs:element ref="email"/>
+        <xs:element ref="siteweb"/>
       </xs:sequence>
+      <xs:attributeGroup ref="intervenant_attlist"/>
     </xs:complexType>
   </xs:element>
-  <xs:element name="description">
-    <xs:complexType/>
-  </xs:element>
+  <xs:attributeGroup name="intervenant_attlist">
+    <xs:attributeGroup ref="id_required"/>
+  </xs:attributeGroup>
+  <xs:element name="email" type="emailAddress"/>
+  <xs:element name="siteweb" type="webAddress"/>
+  <xs:element name="prenom" type="xs:string"/>
 </xs:schema>
+<!-- Fin intervenants -->

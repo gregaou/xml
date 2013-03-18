@@ -2,7 +2,7 @@ MAIN      = master
 DTD				= $(MAIN).dtd
 XML				= $(MAIN).xml
 XMLT			= $(XML).tmp
-SCHEMA		= $(MAIN).xsd
+SCHEMA		= $(MAIN)2.xsd
 XSL				= $(MAIN).xsl
 WWW				= www/
 HTML			= index.html
@@ -39,7 +39,8 @@ $(XML): donnees-master.xsl donnees-master.xml
 	rm $(XMLT)
 
 clean_xml:
-	rm $(XMLT) $(XML)
+	rm $(XMLT) || echo "$(XMLT) déjà supprimé"
+	rm $(XML)  || echo "$(XML) déjà supprimé"
 
 clean_web:
 	([ -f $(WWW)$(HTML) ] && rm $(WWW)$(WEB)) || echo "Rien à supprimer"

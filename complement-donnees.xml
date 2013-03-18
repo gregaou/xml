@@ -2,6 +2,6 @@
 <!DOCTYPE complements SYSTEM "complement-donnees.dtd">
 <complements>
     <complement ref="PRSIN4T0" node="debouches">test</complement>
-    <complement ref="IN12068" node="siteweb">test</complement>
+    <complement ref="IN18" node="siteweb">http://jean-luc.massat.perso.luminy.univ-amu.fr</complement>
     <complement ref="IN12068" node="prenom">test</complement>
 </complements>
