@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 
+  <xs:simpleType name="lieux">
+    <xs:restriction base="xs:string">
+			<xs:pattern value="Luminy" />
+			<xs:pattern value="St Jérôme" />
+			<xs:pattern value="" />
+    </xs:restriction>
+	</xs:simpleType>
+
   <xs:simpleType name="emailAddress">
     <xs:restriction base="xs:string">
       <xs:pattern value="[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}" />
@@ -116,7 +124,7 @@
   </xs:element>
   <xs:element name="description" type="xs:string"/>
   <xs:element name="debouches" type="xs:string"/>
-  <xs:element name="lieux" type="liste"/>
+  <xs:element name="lieux" type="lieux"/>
   <xs:element name="ref-semestres">
     <xs:complexType>
       <xs:sequence>
@@ -272,6 +280,7 @@
         <xs:element ref="nom"/>
         <xs:element ref="credits"/>
         <xs:element ref="resume"/>
+        <xs:element minOccurs="0" maxOccurs="1" ref="lieux"/>
         <xs:element minOccurs="0" maxOccurs="unbounded" ref="ref-intervenant"/>
       </xs:sequence>
       <xs:attributeGroup ref="unite_attlist"/>

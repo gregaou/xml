@@ -79,7 +79,7 @@
 
 <!-- Début unite -->
 <!ELEMENT unites (unite*)>
-<!ELEMENT unite  (nom,credits,resume,ref-intervenant*) >
+<!ELEMENT unite  (nom,credits,resume,lieux,ref-intervenant*) >
 <!ATTLIST unite  %id_required;>
 
 <!ELEMENT credits         (#PCDATA)  >

@@ -59,7 +59,8 @@
                   <p>
                      <xsl:copy-of select="string(info[@nom='contenu']/*)"/>
                   </p>
-               </resume>
+								</resume>
+								<lieux />
                <xsl:for-each select="info[@nom = 'responsables']">
                   <ref-intervenant ref="{@value}"/>
                </xsl:for-each>
