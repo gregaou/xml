@@ -280,8 +280,6 @@
         <xs:element ref="nom"/>
         <xs:element ref="credits"/>
         <xs:element ref="resume"/>
-        <xs:element minOccurs="0" maxOccurs="1" ref="lieux"/>
-        <xs:element minOccurs="0" maxOccurs="unbounded" ref="ref-intervenant"/>
       </xs:sequence>
       <xs:attributeGroup ref="unite_attlist"/>
     </xs:complexType>

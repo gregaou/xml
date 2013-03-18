@@ -1,13 +1,9 @@
-Structure:
-	* Ajout de lieux dans les unités (faudra voir pour la cohérence avec les
-	parcours).
-
 XSD :
 	* Contrainte de Mail, Siteweb et lieux ("" | Luminy | St Jérôme) mise en place
 	* Limitation à un lieu pour les unités
 
 Compléments de données :
-	* Ajout de lieux bidons pour les Parcours et les unités
+	* Ajout de lieux bidons pour les Parcours 
 	* Ajout de débouchés
 
 XSLT :
