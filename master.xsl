@@ -229,11 +229,11 @@
                 </ul>
             </xsl:if>
             <xsl:if
-                test="/master/specialite/responsables/ref-intervenant[@ref = current()/@id] or /master/specialite/parcours/responsables/ref-intervenant[@ref = current()/@id]">
+                test="//specialite/responsables/ref-intervenant[@ref = current()/@id] or //parcours/responsables/ref-intervenant[@ref = current()/@id]">
                 <h3>Responsables des parcours/specialités :</h3>
                 <ul>
                     <xsl:for-each
-                        select="/master/specialite/responsables/ref-intervenant[@ref = current()/@id]">
+                        select="//specialite/responsables/ref-intervenant[@ref = current()/@id]">
                         <li>
                             <a href="{../../@id}.html" class="lien">
                                 <xsl:value-of select="../../nom"/>
@@ -241,7 +241,7 @@
                         </li>
                     </xsl:for-each>
                     <xsl:for-each
-                        select="/master/specialite/parcours/responsables/ref-intervenant[@ref = current()/@id]">
+                        select="//parcours/responsables/ref-intervenant[@ref = current()/@id]">
                         <li>
                             <a href="{../../@id}.html" class="lien">
                                 <xsl:value-of select="../../nom"/>
@@ -448,7 +448,7 @@
     </xsl:if>
     </xsl:template>
     <xsl:template match="lieux">
-    	<xsl:if test="string(lieux) != ''">
+    	<xsl:if test="string(.) != ''">
         <h2>Lieux</h2>
         <p>
         	<xsl:value-of select="."/>
@@ -456,7 +456,7 @@
       </xsl:if>
     </xsl:template>
     <xsl:template match="debouches">
-    	<xsl:if test="string(debouches) != ''">
+    	<xsl:if test="string(.) != ''">
         <h2>Débouchés</h2>
         <p>
         	<xsl:value-of select="."/>
